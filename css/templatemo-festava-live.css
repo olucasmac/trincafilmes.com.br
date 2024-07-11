@@ -481,12 +481,12 @@ strong {
   position: relative;
   overflow: hidden;
   padding-top: 100px;
-  height: calc(100vh - 51px);
+  height: calc(100vh - 0px);
 }
 
 .hero-section small {
   color: var(--white-color);
-  text-transform: uppercase;
+  /* text-transform: uppercase; */
 }
 
 .hero-section .section-overlay {
