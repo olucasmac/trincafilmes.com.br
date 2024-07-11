@@ -288,6 +288,10 @@ strong {
   color: var(--primary-color);
 }
 
+.custom-icon-2 {
+  color: var(--secondary-color);
+}
+
 
 /*---------------------------------------
   CUSTOM BUTTON               
