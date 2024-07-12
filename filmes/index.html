@@ -58,11 +58,17 @@
         position: relative;
         border-radius: 8px;
         overflow: hidden;
+        @media screen and (max-width: 600px) {
+         flex-direction: column;
+        }        
     }
 
     .modal-image {
         flex: 1;
         max-width: 50%;
+        @media screen and (max-width: 600px) {
+            max-width: 100%;
+        }        
     }
 
     .modal-image img{
