@@ -597,7 +597,7 @@ strong {
 }
 
 .artists-image {
-  border-radius: var(--border-radius-medium);
+  /* border-radius: var(--border-radius-medium); */
   display: block;
   width: 100%;
 }
@@ -610,7 +610,7 @@ strong {
 .artists-hover {
   background-color: var(--secondary-color);
   background-color: rgba(248, 203, 46, 0.85);
-  border-radius: var(--border-radius-medium);
+  /* border-radius: var(--border-radius-medium); */
   backdrop-filter: blur(5px) saturate(180%);
   -webkit-backdrop-filter: blur(5px) saturate(180%);
   margin: 10px;
