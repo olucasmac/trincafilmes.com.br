@@ -30,7 +30,7 @@ https://templatemo.com/tm-583-festava-live
   --h4-font-size:                 28px;
   --h5-font-size:                 24px;
   --h6-font-size:                 22px;
-  --p-font-size:                  18px;
+  --p-font-size:                  20px;
   --btn-font-size:                14px;
   --copyright-font-size:          16px;
 
@@ -41,6 +41,10 @@ https://templatemo.com/tm-583-festava-live
   --font-weight-light:            300;
   --font-weight-normal:           400;
   --font-weight-bold:             700;
+}
+
+*, html {
+  scroll-behavior: smooth !important;
 }
 
 body {
@@ -109,7 +113,7 @@ ul li {
 a, 
 button {
   touch-action: manipulation;
-  transition: all 0.3s;
+  transition: all 0.3s !important;
 }
 
 a {
@@ -367,7 +371,14 @@ strong {
   top: 0;
   right: 0;
   left: 0;
-  margin-top: 0px;
+  margin-top: 51px;
+  @media screen and (max-width: 600px) {
+    margin-top: 0px;
+}
+}
+
+.nav-link-2 {
+  font-size: xx-large !important;
 }
 
 .sticky-wrapper.is-sticky .navbar {
@@ -382,7 +393,7 @@ strong {
 .navbar-brand,
 .navbar-brand:hover {
   color: var(--white-color);
-  font-size: var(--h5-font-size);
+  font-size: var(--h3-font-size);
   font-weight: var(--font-weight-bold);
 }
 
@@ -503,6 +514,7 @@ strong {
 
 .hero-section .container .row {
   height: 100%;
+  width: 100%;
 }
 
 
@@ -906,7 +918,7 @@ strong {
   display: block;
 }
 
-.social-icon-link span:hover::before{
+/* .social-icon-link span:hover::before{
   animation: spinAround 2s linear infinite;
 }
 
@@ -917,6 +929,22 @@ strong {
   to {
     transform: rotate(360deg);
   }
+} */
+
+@keyframes bounce {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.jumping {
+  animation: bounce 1s infinite;
 }
 
 
