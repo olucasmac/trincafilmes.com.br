@@ -902,7 +902,7 @@ strong {
   color: var(--white-color);
   font-size: var(--copyright-font-size);
   display: block;
-  margin-right: 0px;
+  margin-right: 15px;
   text-align: center;
   width: 35px;
   height: 35px;
@@ -1093,4 +1093,8 @@ strong {
 
 .photo-gallery .item {
   padding-bottom:30px;
+}
+
+.watch-button {
+  font-size: larger !important;
 }
