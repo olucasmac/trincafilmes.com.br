@@ -78,24 +78,77 @@
             opacity: 1;
             visibility: visible;
         }
+        /* Estilo da camada de fundo da popup */
+        .popup-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.7);
+            display: none;
+            align-items: center;
+            justify-content: center;
+            z-index: 1000;
+        }
+        /* Estilo da popup */
+        .popup {
+            background: #fff;
+            padding: 20px;
+            max-width: 400px;
+            width: 90%;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            text-align: center;
+        }
+        .popup h2 {
+            margin-top: 0;
+        }
+        .popup a {
+            display: inline-block;
+            margin-top: 15px;
+            padding: 10px 20px;
+            background-color: #E57833;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 4px;
+            transition: background-color 0.3s;
+        }
+        .popup a:hover {
+            background-color: #555;
+        }
+        .close-btn {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background: #fff;
+            border: none;
+            font-size: 18px;
+            cursor: pointer;
+            border-radius: 50%;
+            width: 30px;
+            height: 30px;
+            line-height: 28px;
+            text-align: center;
+        }
     </style>
 
     <main>
 
-        <!-- <header class="site-header">
+        <header class="site-header">
             <div class="container">
                 <div class="row">
 
                     <div class="col-lg-12 col-12 d-flex flex-wrap">
                         <p class="d-flex me-4 mb-0">
                             <i class="bi-film custom-icon-2 me-2"></i>
-                            <strong class="text-light">Lorem Ipsum Dolor Sit Amet</strong>
+                            <strong class="text-light">Conheça nossos próximos lançamentos!&nbsp;&nbsp;</strong><a href="/lancamentos" style="color: #ffd700; text-decoration: none;">Saiba mais aqui!</a>
                         </p>
                     </div>
 
                 </div>
             </div>
-        </header> -->
+        </header>
 
 
         <nav class="navbar navbar-expand-lg">
@@ -517,6 +570,39 @@
     <script src="js/jquery.sticky.js"></script>
     <!-- <script src="js/click-scroll.js"></script> -->
     <script src="js/custom.js"></script>
+
+    <!-- Popup -->
+    <div class="popup-overlay" id="popupOverlay">
+        <div class="popup">
+            <button class="close-btn" id="closeBtn">&times;</button>
+            <p style="font-size: 22px; color: #333"><strong>Lançamento de filmes de autor chegando nas salas de cinema!</strong></p>
+            <p style="color: #333;"><strong>CIPRIANO E A MORTE DE CIPRIANO</strong><br>Estreia <strong>17 de outubro</strong></p>
+            <p style="color: #333;"><strong>A CARTA DE ESPERANÇA GARCIA</strong><br>Estreia <strong>14 de novembro</strong></p>
+            <p style="color: #333;">Cinema Independente na telona!</p>
+            <a href="/lancamentos">Clique aqui e saiba mais!</a>
+        </div>
+    </div>
+
+    <script>
+        // Mostrar a popup após 5 segundos
+        window.onload = function() {
+            setTimeout(function() {
+                document.getElementById('popupOverlay').style.display = 'flex';
+            }, 5000);
+        };
+
+        // Fechar a popup ao clicar no botão de fechar
+        document.getElementById('closeBtn').onclick = function() {
+            document.getElementById('popupOverlay').style.display = 'none';
+        };
+
+        // Fechar a popup ao clicar fora dela
+        document.getElementById('popupOverlay').onclick = function(e) {
+            if (e.target == this) {
+                this.style.display = 'none';
+            }
+        };
+    </script>
 
 </body>
 
