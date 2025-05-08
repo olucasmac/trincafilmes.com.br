@@ -1,27 +1,22 @@
 <!doctype html>
 <html lang="en">
-
-<script>
+  <script>
     document.addEventListener('DOMContentLoaded', function() {
-        var navbar = document.getElementById('navbarNav');
+      var navbar = document.getElementById('navbarNav');
 
-        function handleScroll() {
-            if (window.scrollY > 100) { // Ajuste o valor conforme necessário
-                navbar.classList.add('show-navbar');
-            } else {
-                navbar.classList.remove('show-navbar');
-            }
+      function handleScroll() {
+        if (window.scrollY > 100) { // Ajuste o valor conforme necessário
+          navbar.classList.add('show-navbar');
+        } else {
+          navbar.classList.remove('show-navbar');
         }
-
-        window.addEventListener('scroll', handleScroll);
+      }
+      window.addEventListener('scroll', handleScroll);
     });
-    
-</script>
-
-<head>
+  </script>
+  <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
     <meta property="og:type" content="website" />
     <meta property="og:title" content="trinca/filmes" />
     <meta property="og:url" content="https://trincafilmes.com.br/" />
@@ -31,558 +26,389 @@
     <meta property="og:image:height" content="200" />
     <meta property="og:image:alt" content="" />
     <meta property="og:locale" content="pt_BR" />
-
     <link rel="shortcut icon" type="image/x-icon" href="https://secure.gravatar.com/blavatar/432573758413813680eca2ce1044646fdce4958190d9188985fbc4b07bf800e9?s=32" sizes="16x16" />
     <link rel="icon" type="image/x-icon" href="https://secure.gravatar.com/blavatar/432573758413813680eca2ce1044646fdce4958190d9188985fbc4b07bf800e9?s=32" sizes="16x16" />
     <link rel="apple-touch-icon" href="https://secure.gravatar.com/blavatar/432573758413813680eca2ce1044646fdce4958190d9188985fbc4b07bf800e9?s=114" />
     <meta name="description" content="">
     <meta name="author" content="">
-
     <title>trinca/filmes</title>
-
     <!-- CSS FILES -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
-
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;400;700&display=swap" rel="stylesheet">
-
     <link href="css/bootstrap.min.css" rel="stylesheet">
-
     <link href="css/bootstrap-icons.css" rel="stylesheet">
-
     <link href="css/templatemo-festava-live.css" rel="stylesheet">
-
-</head>
-
-<body>
-
+  </head>
+  <body>
     <style>
-        @media screen and (max-width: 600px) {
-            #navbarNav {
-            opacity: 1 !important;
-            visibility: visible !important;
-            }
-            .navbar-nav2 {
-                /* display: none; */
-                padding-left: 25px;
-            }
-        }
+      @media screen and (max-width: 600px) {
         #navbarNav {
-            opacity: 0;
-            visibility: hidden;
-            transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+          opacity: 1 !important;
+          visibility: visible !important;
         }
 
-        #navbarNav.show-navbar {
-            opacity: 1;
-            visibility: visible;
+        .navbar-nav2 {
+          /* display: none; */
+          padding-left: 25px;
         }
-        /* Estilo da camada de fundo da popup */
-        .popup-overlay {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.7);
-            display: none;
-            align-items: center;
-            justify-content: center;
-            z-index: 1000;
-        }
-        /* Estilo da popup */
-        .popup {
-            background: #fff;
-            padding: 20px;
-            max-width: 400px;
-            width: 90%;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-            text-align: center;
-        }
-        .popup h2 {
-            margin-top: 0;
-        }
-        .popup a {
-            display: inline-block;
-            margin-top: 15px;
-            padding: 10px 20px;
-            background-color: #E57833;
-            color: #fff;
-            text-decoration: none;
-            border-radius: 4px;
-            transition: background-color 0.3s;
-        }
-        .popup a:hover {
-            background-color: #555;
-        }
-        .close-btn {
-            position: absolute;
-            top: 10px;
-            right: 10px;
-            background: #fff;
-            border: none;
-            font-size: 18px;
-            cursor: pointer;
-            border-radius: 50%;
-            width: 30px;
-            height: 30px;
-            line-height: 28px;
-            text-align: center;
-        }
+      }
+
+      #navbarNav {
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+      }
+
+      #navbarNav.show-navbar {
+        opacity: 1;
+        visibility: visible;
+      }
+
+      /* Estilo da camada de fundo da popup */
+      .popup-overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.7);
+        display: none;
+        align-items: center;
+        justify-content: center;
+        z-index: 1000;
+      }
+
+      /* Estilo da popup */
+      .popup {
+        background: #fff;
+        padding: 20px;
+        max-width: 400px;
+        width: 90%;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        text-align: center;
+      }
+
+      .popup h2 {
+        margin-top: 0;
+      }
+
+      .popup a {
+        display: inline-block;
+        margin-top: 15px;
+        padding: 10px 20px;
+        background-color: #E57833;
+        color: #fff;
+        text-decoration: none;
+        border-radius: 4px;
+        transition: background-color 0.3s;
+      }
+
+      .popup a:hover {
+        background-color: #555;
+      }
+
+      .close-btn {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        background: #fff;
+        border: none;
+        font-size: 18px;
+        cursor: pointer;
+        border-radius: 50%;
+        width: 30px;
+        height: 30px;
+        line-height: 28px;
+        text-align: center;
+      }
     </style>
-
     <main>
-
-        <!-- <header class="site-header">
-            <div class="container">
-                <div class="row">
-
-                    <div class="col-lg-12 col-12 d-flex flex-wrap">
-                        <p class="d-flex me-4 mb-0">
-                            <i class="bi-film custom-icon-2 me-2"></i>
-                            <strong class="text-light">Conheça nossos próximos lançamentos!&nbsp;&nbsp;</strong><a href="/lancamentos" style="color: #ffd700; text-decoration: none;">Saiba mais aqui!</a>
-                        </p>
-                    </div>
-
-                </div>
+      <!-- <header class="site-header"><div class="container"><div class="row"><div class="col-lg-12 col-12 d-flex flex-wrap"><p class="d-flex me-4 mb-0"><i class="bi-film custom-icon-2 me-2"></i><strong class="text-light">Conheça nossos próximos lançamentos!&nbsp;&nbsp;</strong><a href="/lancamentos" style="color: #ffd700; text-decoration: none;">Saiba mais aqui!</a></p></div></div></div></header> -->
+      <nav class="navbar navbar-expand-lg">
+        <div class="container">
+          <a class="navbar-brand" href="/">
+            <img style="width: 100px" src="images/logo.png" />&nbsp&nbsp trinca/filmes </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav align-items-lg-center ms-auto me-lg-5">
+              <li class="nav-item">
+                <a class="nav-link active" href="/">home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/filmes">filmes</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/fotografias">fotografias</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/sobre">sobre</a>
+              </li>
+            </ul>
+            <!-- <a href="sobre.html" class="btn custom-btn d-lg-block d-none">sobre</a> -->
+          </div>
+        </div>
+      </nav>
+      <section class="hero-section" id="section_1">
+        <div class="section-overlay"></div>
+        <div class="container d-flex ">
+          <div class="row">
+            <div class="col-12 mt-auto mb-5">
+              <ul class="navbar-nav navbar-nav2 ms-auto me-lg-5">
+                <li class="nav-item">
+                  <a class="nav-link nav-link-2 active" href="/">home</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link nav-link-2" href="/filmes">filmes</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link nav-link-2" href="/fotografias">fotografias</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link nav-link-2" href="/sobre">sobre</a>
+                </li>
+              </ul>
+              <!-- <small>trinca/filmes APRESENTA</small><h3 class="text-white mb-5">CIPRIANO E A MORTE DE CIPRIANO</h3><a class="btn custom-btn smoothscroll" href="#section_2">saiba mais</a> -->
             </div>
-        </header> -->
-
-
-        <nav class="navbar navbar-expand-lg">
-            <div class="container">
-                <a class="navbar-brand" href="/">
-                   <img style="width: 100px" src="images/logo.png" />&nbsp&nbsp trinca/filmes
-                </a>
-
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-
-                <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav align-items-lg-center ms-auto me-lg-5">
-                        <li class="nav-item">
-                            <a class="nav-link active" href="/">home</a>
-                        </li>
-
-                        <li class="nav-item">
-                            <a class="nav-link" href="/filmes">filmes</a>
-                        </li>
-
-                        <li class="nav-item">
-                            <a class="nav-link" href="/fotografias">fotografias</a>
-                        </li>
-
-                        <li class="nav-item">
-                            <a class="nav-link" href="/sobre">sobre</a>
-                        </li>
-                    </ul>
-
-                    <!-- <a href="sobre.html" class="btn custom-btn d-lg-block d-none">sobre</a> -->
-                </div>
-            </div>
-        </nav>
-
-
-        <section class="hero-section" id="section_1">
-            <div class="section-overlay"></div>
-
-            <div class="container d-flex ">
-                <div class="row">
-
-                    <div class="col-12 mt-auto mb-5">
-                        <ul class="navbar-nav navbar-nav2 ms-auto me-lg-5">
-                            <li class="nav-item">
-                                <a class="nav-link nav-link-2 active" href="/">home</a>
-                            </li>
-    
-                            <li class="nav-item">
-                                <a class="nav-link nav-link-2" href="/filmes">filmes</a>
-                            </li>
-    
-                            <li class="nav-item">
-                                <a class="nav-link nav-link-2" href="/fotografias">fotografias</a>
-                            </li>
-
-                            <li class="nav-item">
-                                <a class="nav-link nav-link-2" href="/sobre">sobre</a>
-                            </li>
-                        </ul>    
-                        <!-- <small>trinca/filmes APRESENTA</small>
-
-                        <h3 class="text-white mb-5">CIPRIANO E A MORTE DE CIPRIANO</h3>
-
-                        <a class="btn custom-btn smoothscroll" href="#section_2">saiba mais</a> -->
-                    </div>
-
-                    <div class="col-lg-12 col-12 mt-auto d-flex flex-column flex-lg-row text-center">
-                        <div class="date-wrap">
-                            <!-- <h5 class="text-white">
-                                <i class="custom-icon bi-clock me-2"></i>
+            <div class="col-lg-12 col-12 mt-auto d-flex flex-column flex-lg-row text-center">
+              <div class="date-wrap">
+                <!-- <h5 class="text-white"><i class="custom-icon bi-clock me-2"></i>
                                 15<sup></sup>, agosto 2024
                             </h5> -->
-                        </div>
-
-                        <div class="location-wrap mx-auto py-3 py-lg-0">
-                            <a href="#section_2" style="  margin-right: 0px !important;" class="social-icon-link jumping">
-                                <span class="bi-chevron-down"></span>
-                            </a>
-                            <!-- <h5 class="text-white">
-                                <i class="custom-icon bi-geo-alt me-2"></i>
+              </div>
+              <div class="location-wrap mx-auto py-3 py-lg-0">
+                <a href="#section_2" style="  margin-right: 0px !important;" class="social-icon-link jumping">
+                  <span class="bi-chevron-down"></span>
+                </a>
+                <!-- <h5 class="text-white"><i class="custom-icon bi-geo-alt me-2"></i>
                                 Teatro 4 de Setembro
                             </h5> -->
-                        </div>
-
-                        <div class="social-share">
-                            <!-- <ul class="social-icon d-flex align-items-center justify-content-center">
-                                <span class="text-white me-3">Compartilhe:</span>
-
-                                <li class="social-icon-item">
-                                    <a href="#" class="social-icon-link">
-                                        <span class="bi-facebook"></span>
-                                    </a>
-                                </li>
-
-                                <li class="social-icon-item">
-                                    <a href="#" class="social-icon-link">
-                                        <span class="bi-twitter"></span>
-                                    </a>
-                                </li>
-
-                                <li class="social-icon-item">
-                                    <a href="#" class="social-icon-link">
-                                        <span class="bi-instagram"></span>
-                                    </a>
-                                </li>
-                            </ul> -->
-                        </div>
-                    </div>
-                </div>
+              </div>
+              <div class="social-share">
+                <!-- <ul class="social-icon d-flex align-items-center justify-content-center"><span class="text-white me-3">Compartilhe:</span><li class="social-icon-item"><a href="#" class="social-icon-link"><span class="bi-facebook"></span></a></li><li class="social-icon-item"><a href="#" class="social-icon-link"><span class="bi-twitter"></span></a></li><li class="social-icon-item"><a href="#" class="social-icon-link"><span class="bi-instagram"></span></a></li></ul> -->
+              </div>
             </div>
-
-            <div class="video-wrap">
-                <video autoplay="" loop="" muted="" class="custom-video" poster="">
-                    <source src="video/7984186-uhd_4096_2160_25fps.mp4" type="video/mp4">
-
-                    Your browser does not support the video tag.
-                </video>
-            </div>
-        </section>
-
-        <section class="artists-section section-padding" id="section_2">
-            <div class="container">
-                <div class="row justify-content-center">
-
-                    <div class="col-12 text-center">
-                        <h2 class="mb-4">filmes</h1>
-                    </div>
-
-                    <div class="col-lg-4 col-md-4 col-12">
-                        <div class="artists-thumb">
-                            <div class="artists-image-wrap">
-                                <img src="images/cartazes/cartaz_cipriano-e-a-morte-de-cipriano_page-0001.jpg"
-                                    class="artists-image img-fluid">
-                            </div>
-
-                            <div class="artists-hover">
-                                <p>título:
-                                    <strong>CIPRIANO E A MORTE DE CIPRIANO</strong>
-                                </p>
-
-                                <p>ano de Lançamento:
-                                    <strong>2024</strong>
-                                </p>
-
-                                <!-- <p>
-                                    <strong>Music:</strong>
-                                    Pop
-                                </p> -->
-
-                                <!-- <hr> -->
-
-                                <!-- <p class="mb-0">
-                                    <strong>Plataforma:</strong>
-                                    <a href="#">Youtube</a>
-                                </p> -->
-                            </div>
-
-                        </div>
-                    </div>
-
-                    <div class="col-lg-4 col-md-4 col-12">
-                        <div class="artists-thumb">
-                            <div class="artists-image-wrap">
-                                <img src="images/cartazes/cartaz_a-carta-de-esperanca-garcia_page-0001.jpg"
-                                    class="artists-image img-fluid">
-                            </div>
-
-                            <div class="artists-hover">
-                                <p>título:
-                                    <strong>A CARTA DE ESPERANÇA GARCIA</strong>
-                                </p>
-
-                                <p>ano de Lançamento:
-                                    <strong>2024</strong>
-                                </p>
-
-                                <!-- <p>
-                                    <strong>Music:</strong>
-                                    Pop
-                                </p> -->
-
-                                <!-- <hr> -->
-
-                                <!-- <p class="mb-0">
-                                    <strong>Plataforma:</strong>
-                                    <a href="#">Youtube</a>
-                                </p> -->
-                            </div>
-
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-4 col-12">
-                        <div class="artists-thumb">
-                            <div class="artists-image-wrap">
-                                <img src="images/cartazes/LB2_Suassuna_A3.jpg"
-                                    class="artists-image img-fluid">
-                            </div>
-
-                            <div class="artists-hover">
-                                <p>título:
-                                    <strong>O SERTÃOMUNDO DE SUASSUNA</strong>
-                                </p>
-
-                                <p>ano de Lançamento:
-                                    <strong>2003</strong>
-                                </p>
-
-                                <!-- <p>
-                                    <strong>Music:</strong>
-                                    Pop
-                                </p> -->
-
-                                <!-- <hr> -->
-
-                                <!-- <p class="mb-0">
-                                    <strong>Plataforma:</strong>
-                                    <a href="#">Youtube</a>
-                                </p> -->
-                            </div>
-
-                        </div>
-                    </div>
-
-                </div>
-
-
-                <br>
-                <center><a style="width: 35%;" class="btn custom-btn smoothscroll" href="/filmes">mais filmes</a></center>
+          </div>
         </div>
-        </section>
-
-        <section class="about-section section-padding" id="section_4">
-            <div class="container">
-                <div class="row">
-
-                    <div class="col-lg-6 col-12 mb-4 mb-lg-0 d-flex align-items-center">
-                        <div class="services-info">
-                            <h2 class="text-white mb-4">trinca/filmes</h2>
-
-                            <p class="text-white">TRINCAFILMES é uma produtora que trabalha com cinema e literatura mantendo especial atenção nas questões relacionadas ao nordeste do Brasil e ao Sertão, em particular. Sede em Teresina, Piauí.</p><p  class="text-white">Gardênia Cury e Douglas Machado são sócios-fundadores e estão à frente das produções.</p>
-
-                            <br>
-
-                            <a class="btn custom-btn smoothscroll" href="/sobre">saiba mais</a>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-6 col-12">
-                        <div class="about-text-wrap">
-                            <img src="images/douglas_e_gardenia.jpg" class="about-image img-fluid">
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-
-        </section>
-
-        <section class="artists-section section-padding" id="section_3">
-            <div class="container">
-                <div class="row">
-    
-                    <div class="col-lg-6 col-12">
-                        <div class="about-text-wrap">
-                            <img src="images/capa_gabriel_arcanjo_2.jpg" class="about-image img-fluid">
-                        </div>
-                    </div>
-    
-                    <div class="col-lg-6 col-12 mb-4 mb-lg-0 d-flex align-items-center">
-                        <div class="services-info">
-                            <h2 class="text-black mb-4">projetos em desenvolvimento</h2>
-    
-                            <!-- <p class="text-black">2024 e 2025</p> -->
-    
-                            <br>
-    
-                            <a class="btn custom-btn smoothscroll" href="/em-desenvolvimento">clique aqui</a>
-                        </div>
-                    </div>
-    
-                </div>
-        </section>
-
-</main>
-
-
-    <footer class="site-footer">
-        <div class="site-footer-top">
-            <div class="container">
-                <div class="row">
-
-                    <div class="col-lg-6 col-7">
-                        <h3 class="text-white mb-lg-0"><img style="width: 65px" src="images/logo.png" />&nbsp&nbsp trinca/filmes</h3>
-                    </div>
-
-                    <div class="col-lg-6 col-5 d-flex justify-content-lg-end align-items-center">
-                        <ul class="social-icon d-flex justify-content-lg-end">
-                            <li class="social-icon-item">
-                                <a href="https://www.youtube.com/@trincafilmes" class="social-icon-link">
-                                    <span class="bi-youtube"></span>
-                                </a>
-                            </li>
-                            <li class="social-icon-item">
-                                <a href="https://www.instagram.com/trincafilmes/" class="social-icon-link">
-                                    <span class="bi-instagram"></span>
-                                </a>
-                            </li>
-                            <li class="social-icon-item">
-                                <a href="https://www.facebook.com/profile.php?id=712642976" class="social-icon-link">
-                                    <span class="bi-facebook"></span>
-                                </a>
-                            </li>
-
-                        </ul>
-                    </div>
-                </div>
-            </div>
+        <div class="video-wrap">
+          <video autoplay="" loop="" muted="" class="custom-video" poster="">
+            <source src="video/7984186-uhd_4096_2160_25fps.mp4" type="video/mp4"> Your browser does not support the video tag.
+          </video>
         </div>
-
+      </section>
+      <section class="artists-section section-padding" id="section_2">
         <div class="container">
-            <div class="row">
-
-                <div class="col-lg-5 col-12 mb-4 pb-2">
-                    <h5 class="site-footer-title mb-3">menu</h5>
-
-                    <ul class="site-footer-links">
-                        <li class="site-footer-link-item">
-                            <a href="/" class="site-footer-link">home</a>
-                        </li>
-
-                        <li class="site-footer-link-item">
-                            <a href="/filmes" class="site-footer-link">filmes</a>
-                        </li>
-
-                        <li class="site-footer-link-item">
-                            <a href="/fotografias" class="site-footer-link">fotografias</a>
-                        </li>
-
-                        <li class="site-footer-link-item">
-                            <a href="/sobre" class="site-footer-link">sobre</a>
-                        </li>
-
-                    </ul>
-                </div>
-
-                <div class="col-lg-4 col-md-6 col-12 mb-4 mb-lg-0">
-                    <h5 class="site-footer-title mb-3">contato</h5>
-
-                    <p class="text-white d-flex mb-1">
-                        <a href="tel: 086-9987-5896" class="site-footer-link">
-                            +55 86 99987-5896
-                        </a>
-                    </p>
-
-                    <p class="text-white d-flex">
-                        <a href="mailto:trincafilmes@trincafilmes.com.br" class="site-footer-link">
-                            trincafilmes@trincafilmes.com.br
-                        </a>
-                    </p>
-                </div>
-
-                <div class="col-lg-3 col-md-6 col-11 mb-4 mb-lg-0 mb-md-0">
-                    <h5 class="site-footer-title mb-3">endereço</h5>
-
-                    <p class="text-white d-flex mt-3 mb-2">
-                        Rua João Cabral, 719 / 202<br>
-                        Centro/Norte<br>
-                        Teresina - Piauí - Brasil<br>
-                        CEP: 64000-030</p>
-                    <!-- <a class="link-fx-1 color-contrast-higher mt-3" href="#">
-                        <span>Our Maps</span>
-                        <svg class="icon" viewBox="0 0 32 32" aria-hidden="true">
-                            <g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
-                                <circle cx="16" cy="16" r="15.5"></circle>
-                                <line x1="10" y1="18" x2="16" y2="12"></line>
-                                <line x1="16" y1="12" x2="22" y2="18"></line>
-                            </g>
-                        </svg>
-                    </a> -->
-                </div>
+          <div class="row justify-content-center">
+            <div class="col-12 text-center">
+              <h2 class="mb-4">filmes </h1>
             </div>
-        </div>
-
-        <div class="site-footer-bottom">
-            <div class="container">
-                <div class="row">
-
-                    <div class="col-lg-12 col-12 mt-5">
-                        <p class="copyright-text">©2024TRINCAFILMES</p>
-                        <small style="color: rgb(187, 186, 186);">desenvolvido por <a class="site-footer-link" target="_blank" href="https://lucasmac.com">olucasmac</a></small>
-                    </div>
-
-                    <!-- <div class="col-lg-8 col-12 mt-lg-5">
-                        <ul class="site-footer-links">
-                            <li class="site-footer-link-item">
-                                <a href="#" class="site-footer-link">Terms &amp; Conditions</a>
-                            </li>
-
-                            <li class="site-footer-link-item">
-                                <a href="#" class="site-footer-link">Privacy Policy</a>
-                            </li>
-
-                            <li class="site-footer-link-item">
-                                <a href="#" class="site-footer-link">Your Feedback</a>
-                            </li>
-                        </ul>
-                    </div> -->
+            <div class="col-lg-4 col-md-4 col-12">
+              <div class="artists-thumb">
+                <div class="artists-image-wrap">
+                  <img src="images/cartazes/cartaz_cipriano-e-a-morte-de-cipriano_page-0001.jpg" class="artists-image img-fluid">
                 </div>
+                <div class="artists-hover">
+                  <p>título: <strong>CIPRIANO E A MORTE DE CIPRIANO</strong>
+                  </p>
+                  <p>ano de Lançamento: <strong>2024</strong>
+                  </p>
+                  <!-- <p><strong>Music:</strong>
+                                    Pop
+                                </p> -->
+                  <!-- <hr> -->
+                  <!-- <p class="mb-0"><strong>Plataforma:</strong><a href="#">Youtube</a></p> -->
+                </div>
+              </div>
             </div>
+            <div class="col-lg-4 col-md-4 col-12">
+              <div class="artists-thumb">
+                <div class="artists-image-wrap">
+                  <img src="images/cartazes/cartaz_a-carta-de-esperanca-garcia_page-0001.jpg" class="artists-image img-fluid">
+                </div>
+                <div class="artists-hover">
+                  <p>título: <strong>A CARTA DE ESPERANÇA GARCIA</strong>
+                  </p>
+                  <p>ano de Lançamento: <strong>2024</strong>
+                  </p>
+                  <!-- <p><strong>Music:</strong>
+                                    Pop
+                                </p> -->
+                  <!-- <hr> -->
+                  <!-- <p class="mb-0"><strong>Plataforma:</strong><a href="#">Youtube</a></p> -->
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-4 col-12">
+              <div class="artists-thumb">
+                <div class="artists-image-wrap">
+                  <img src="images/cartazes/LB2_Suassuna_A3.jpg" class="artists-image img-fluid">
+                </div>
+                <div class="artists-hover">
+                  <p>título: <strong>O SERTÃOMUNDO DE SUASSUNA</strong>
+                  </p>
+                  <p>ano de Lançamento: <strong>2003</strong>
+                  </p>
+                  <!-- <p><strong>Music:</strong>
+                                    Pop
+                                </p> -->
+                  <!-- <hr> -->
+                  <!-- <p class="mb-0"><strong>Plataforma:</strong><a href="#">Youtube</a></p> -->
+                </div>
+              </div>
+            </div>
+          </div>
+          <br>
+          <center>
+            <a style="width: 35%;" class="btn custom-btn smoothscroll" href="/filmes">mais filmes</a>
+          </center>
         </div>
+      </section>
+      <section class="about-section section-padding" id="section_4">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-6 col-12 mb-4 mb-lg-0 d-flex align-items-center">
+              <div class="services-info">
+                <h2 class="text-white mb-4">trinca/filmes</h2>
+                <p class="text-white">TRINCAFILMES é uma produtora que trabalha com cinema e literatura mantendo especial atenção nas questões relacionadas ao nordeste do Brasil e ao Sertão, em particular. Sede em Teresina, Piauí.</p>
+                <p class="text-white">Gardênia Cury e Douglas Machado são sócios-fundadores e estão à frente das produções.</p>
+                <br>
+                <a class="btn custom-btn smoothscroll" href="/sobre">saiba mais</a>
+              </div>
+            </div>
+            <div class="col-lg-6 col-12">
+              <div class="about-text-wrap">
+                <img src="images/douglas_e_gardenia.jpg" class="about-image img-fluid">
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="artists-section section-padding" id="section_3">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-6 col-12">
+              <div class="about-text-wrap">
+                <img src="images/la_hora_del_caronte_mockup.jpg" class="about-image img-fluid">
+              </div>
+            </div>
+            <div class="col-lg-6 col-12 mb-4 mb-lg-0 d-flex align-items-center">
+              <div class="services-info">
+                <h2 class="text-black mb-4">projetos em desenvolvimento</h2>
+                <!-- <p class="text-black">2024 e 2025</p> -->
+                <br>
+                <a class="btn custom-btn smoothscroll" href="/em-desenvolvimento">clique aqui</a>
+              </div>
+            </div>
+          </div>
+      </section>
+    </main>
+    <footer class="site-footer">
+      <div class="site-footer-top">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-6 col-7">
+              <h3 class="text-white mb-lg-0">
+                <img style="width: 65px" src="images/logo.png" />&nbsp&nbsp trinca/filmes
+              </h3>
+            </div>
+            <div class="col-lg-6 col-5 d-flex justify-content-lg-end align-items-center">
+              <ul class="social-icon d-flex justify-content-lg-end">
+                <li class="social-icon-item">
+                  <a href="https://www.youtube.com/@trincafilmes" class="social-icon-link">
+                    <span class="bi-youtube"></span>
+                  </a>
+                </li>
+                <li class="social-icon-item">
+                  <a href="https://www.instagram.com/trincafilmes/" class="social-icon-link">
+                    <span class="bi-instagram"></span>
+                  </a>
+                </li>
+                <li class="social-icon-item">
+                  <a href="https://www.facebook.com/profile.php?id=712642976" class="social-icon-link">
+                    <span class="bi-facebook"></span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-5 col-12 mb-4 pb-2">
+            <h5 class="site-footer-title mb-3">menu</h5>
+            <ul class="site-footer-links">
+              <li class="site-footer-link-item">
+                <a href="/" class="site-footer-link">home</a>
+              </li>
+              <li class="site-footer-link-item">
+                <a href="/filmes" class="site-footer-link">filmes</a>
+              </li>
+              <li class="site-footer-link-item">
+                <a href="/fotografias" class="site-footer-link">fotografias</a>
+              </li>
+              <li class="site-footer-link-item">
+                <a href="/sobre" class="site-footer-link">sobre</a>
+              </li>
+            </ul>
+          </div>
+          <div class="col-lg-4 col-md-6 col-12 mb-4 mb-lg-0">
+            <h5 class="site-footer-title mb-3">contato</h5>
+            <p class="text-white d-flex mb-1">
+              <a href="tel: 086-9987-5896" class="site-footer-link"> +55 86 99987-5896 </a>
+            </p>
+            <p class="text-white d-flex">
+              <a href="mailto:trincafilmes@trincafilmes.com.br" class="site-footer-link"> trincafilmes@trincafilmes.com.br </a>
+            </p>
+          </div>
+          <div class="col-lg-3 col-md-6 col-11 mb-4 mb-lg-0 mb-md-0">
+            <h5 class="site-footer-title mb-3">endereço</h5>
+            <p class="text-white d-flex mt-3 mb-2"> Rua João Cabral, 719 / 202 <br> Centro/Norte <br> Teresina - Piauí - Brasil <br> CEP: 64000-030 </p>
+            <!-- <a class="link-fx-1 color-contrast-higher mt-3" href="#"><span>Our Maps</span><svg class="icon" viewBox="0 0 32 32" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><circle cx="16" cy="16" r="15.5"></circle><line x1="10" y1="18" x2="16" y2="12"></line><line x1="16" y1="12" x2="22" y2="18"></line></g></svg></a> -->
+          </div>
+        </div>
+      </div>
+      <div class="site-footer-bottom">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-12 col-12 mt-5">
+              <p class="copyright-text">©2025TRINCAFILMES</p>
+              <small style="color: rgb(187, 186, 186);">desenvolvido por <a class="site-footer-link" target="_blank" href="https://lucasmac.com">olucasmac</a>
+              </small>
+            </div>
+            <!-- <div class="col-lg-8 col-12 mt-lg-5"><ul class="site-footer-links"><li class="site-footer-link-item"><a href="#" class="site-footer-link">Terms &amp; Conditions</a></li><li class="site-footer-link-item"><a href="#" class="site-footer-link">Privacy Policy</a></li><li class="site-footer-link-item"><a href="#" class="site-footer-link">Your Feedback</a></li></ul></div> -->
+          </div>
+        </div>
+      </div>
     </footer>
-
     <!-- JAVASCRIPT FILES -->
     <script src="js/jquery.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/jquery.sticky.js"></script>
     <!-- <script src="js/click-scroll.js"></script> -->
     <script src="js/custom.js"></script>
-
     <!-- Popup -->
     <div class="popup-overlay" id="popupOverlay">
-        <div class="popup">
-            <button class="close-btn" id="closeBtn">&times;</button>
-            <p style="font-size: 22px; color: #333"><strong>Lançamento de filmes de autor chegando nas salas de cinema!</strong></p>
-            <p style="color: #333;"><strong>CIPRIANO E A MORTE DE CIPRIANO</strong><br>Estreia <strong>17 de outubro</strong></p>
-            <p style="color: #333;"><strong>A CARTA DE ESPERANÇA GARCIA</strong><br>Estreia <strong>14 de novembro</strong></p>
-            <p style="color: #333;">Cinema Independente na telona!</p>
-            <a href="/lancamentos">Clique aqui e saiba mais!</a>
-        </div>
+      <div class="popup">
+        <button class="close-btn" id="closeBtn">&times;</button>
+        <p style="font-size: 22px; color: #333">
+          <strong>Lançamento de filmes de autor chegando nas salas de cinema!</strong>
+        </p>
+        <p style="color: #333;">
+          <strong>CIPRIANO E A MORTE DE CIPRIANO</strong>
+          <br>Estreia <strong>17 de outubro</strong>
+        </p>
+        <p style="color: #333;">
+          <strong>A CARTA DE ESPERANÇA GARCIA</strong>
+          <br>Estreia <strong>14 de novembro</strong>
+        </p>
+        <p style="color: #333;">Cinema Independente na telona!</p>
+        <a href="/lancamentos">Clique aqui e saiba mais!</a>
+      </div>
     </div>
-
     <!-- <script>
         // Mostrar a popup após 5 segundos
         window.onload = function() {
@@ -603,7 +429,5 @@
             }
         };
     </script> -->
-
-</body>
-
+  </body>
 </html>

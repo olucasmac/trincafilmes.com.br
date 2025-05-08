@@ -1,10 +1,8 @@
 <!doctype html>
 <html lang="en">
-
-<head>
+  <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
     <meta property="og:type" content="website" />
     <meta property="og:title" content="trinca/filmes" />
     <meta property="og:url" content="https://trincafilmes.com.br/" />
@@ -14,746 +12,819 @@
     <meta property="og:image:height" content="200" />
     <meta property="og:image:alt" content="" />
     <meta property="og:locale" content="pt_BR" />
-
     <link rel="shortcut icon" type="image/x-icon" href="https://secure.gravatar.com/blavatar/432573758413813680eca2ce1044646fdce4958190d9188985fbc4b07bf800e9?s=32" sizes="16x16" />
     <link rel="icon" type="image/x-icon" href="https://secure.gravatar.com/blavatar/432573758413813680eca2ce1044646fdce4958190d9188985fbc4b07bf800e9?s=32" sizes="16x16" />
     <link rel="apple-touch-icon" href="https://secure.gravatar.com/blavatar/432573758413813680eca2ce1044646fdce4958190d9188985fbc4b07bf800e9?s=114" />
     <meta name="description" content="">
     <meta name="author" content="">
-
     <title>filmes | trinca/filmes</title>
-
     <!-- CSS FILES -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
-
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;400;700&display=swap" rel="stylesheet">
-
     <link href="../css/bootstrap.min.css" rel="stylesheet">
-
     <link href="../css/bootstrap-icons.css" rel="stylesheet">
-
     <link href="../css/templatemo-festava-live.css" rel="stylesheet">
-
-</head>
-<style>
+  </head>
+  <style>
     .sticky-wrapper {
-        margin-top: 0px !important;
+      margin-top: 0px !important;
     }
 
     .artists-image-wrap:hover {
-        cursor: pointer;
+      cursor: pointer;
     }
 
     /* Modal Styles */
     .modal {
-        display: none;
-        position: fixed;
-        z-index: 1;
-        padding-top: 100px;
-        left: 0;
-        top: 0;
-        width: 100%;
-        height: 100%;
-        overflow: auto;
-        background-color: rgb(0, 0, 0);
-        background-color: rgba(0, 0, 0, 0.9);
+      display: none;
+      position: fixed;
+      z-index: 1;
+      padding-top: 100px;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      overflow: auto;
+      background-color: rgb(0, 0, 0);
+      background-color: rgba(0, 0, 0, 0.9);
     }
 
     .modal-content {
-        margin: auto;
-        display: flex;
-        flex-direction: row;
-        width: 85%;
-        max-width: 1200px;
-        background-color: #fff;
-        position: relative;
-        border-radius: 8px;
-        overflow: hidden;
-        @media screen and (max-width: 600px) {
-         flex-direction: column;
-        }        
+      margin: auto;
+      display: flex;
+      flex-direction: row;
+      width: 85%;
+      max-width: 1200px;
+      background-color: #fff;
+      position: relative;
+      border-radius: 8px;
+      overflow: hidden;
+
+      @media screen and (max-width: 600px) {
+        flex-direction: column;
+      }
     }
 
     .modal-image {
-        flex: 1;
-        max-width: 50%;
-        padding-bottom: 50px;
-        @media screen and (max-width: 600px) {
-            max-width: 100%;
-        }        
-    }
+      flex: 1;
+      max-width: 50%;
+      padding-bottom: 50px;
 
-    .modal-image img{
+      @media screen and (max-width: 600px) {
         max-width: 100%;
-        /* height: 90%; */
-        object-fit: cover;
-        padding: 20px;
+      }
     }
 
-    .modal-image a{
-        padding-left: 25px;
+    .modal-image img {
+      max-width: 100%;
+      /* height: 90%; */
+      object-fit: cover;
+      padding: 20px;
+    }
+
+    .modal-image a {
+      padding-left: 25px;
     }
 
     .modal-details {
-        flex: 1.5;
-        padding: 20px;
-        color: #000;
-        overflow-y: auto;
+      flex: 1.5;
+      padding: 20px;
+      color: #000;
+      overflow-y: auto;
     }
 
     .modal-close {
-        position: absolute;
-        top: 15px;
-        right: 35px;
-        color: #fff;
-        font-size: 40px;
-        font-weight: bold;
-        transition: 0.3s;
+      position: absolute;
+      top: 15px;
+      right: 35px;
+      color: #fff;
+      font-size: 40px;
+      font-weight: bold;
+      transition: 0.3s;
     }
 
     .modal-close:hover,
     .modal-close:focus {
-        color: #bbb;
-        text-decoration: none;
-        cursor: pointer;
+      color: #bbb;
+      text-decoration: none;
+      cursor: pointer;
     }
 
     .modal-button {
-        display: block;
-        margin: 20px auto;
-        padding: 10px 20px;
-        /* background-color: #000;
+      display: block;
+      margin: 20px auto;
+      padding: 10px 20px;
+      /* background-color: #000;
         color: #fff; */
-        border: none;
-        cursor: pointer;
-        font-size: 16px;
+      border: none;
+      cursor: pointer;
+      font-size: 16px;
     }
 
     /* .modal-button:hover {
         background-color: #333;
     } */
-
     .modal-text {
-        color: #000;
-        text-align: left;
-        /* padding: 20px; */
+      color: #000;
+      text-align: left;
+      /* padding: 20px; */
     }
 
     .modal-details p {
-        margin: 10px 0;
-        color: #000;
-        font-size: medium;
+      margin: 10px 0;
+      color: #000;
+      font-size: medium;
     }
 
     .modal-text a {
-        color: #000;
-        text-decoration: underline;
+      color: #000;
+      text-decoration: underline;
     }
-</style>
-
-<body>
-
+  </style>
+  <body>
     <main>
-
-        <nav class="navbar navbar-expand-lg" style="background-color: #000;">
-            <div class="container">
-                <a class="navbar-brand" href="../">
-                    <img style="width: 100px" src="../images/logo.png" />&nbsp&nbsp trinca/filmes
-                </a>
-
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-
-                <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav align-items-lg-center ms-auto me-lg-5">
-                        <li class="nav-item">
-                            <a class="nav-link click-scroll" href="../">home</a>
-                        </li>
-
-                        <li class="nav-item">
-                            <a class="nav-link click-scroll active" href="../filmes">filmes</a>
-                        </li>
-
-                        <li class="nav-item">
-                            <a class="nav-link click-scroll" href="../fotografias">fotografias</a>
-                        </li>
-
-                        <li class="nav-item">
-                            <a class="nav-link click-scroll" href="../sobre">sobre</a>
-                        </li>
-
-                    </ul>
-
-                    <!-- <a href="sobre.html" class="btn custom-btn d-lg-block d-none">sobre</a> -->
-                </div>
-            </div>
-        </nav>
-
-        <section class="artists-section section-padding" id="section_2">
-            <div class="container">
-                <div class="row justify-content" style="padding-top: 51px;">
-
-                    <div class="col-12 text-center">
-                        <h2 class="mb-4" style=" text-align: justify;">filmes</h2>
-                    </div>
-
-                    <div class="col-lg-3 col-md-4 col-sm-6">
-                        <div class="artists-thumb">
-                            <div class="artists-image-wrap">
-                                <img src="../images/cartazes/cartaz_cipriano-e-a-morte-de-cipriano_page-0001.jpg"
-                                    class="artists-image img-fluid" onclick="openModal('modal1')">
-                            </div>
-                        </div>
-                        <!-- Modal -->
-                        <div id="modal1" class="modal">
-                            <span class="modal-close" onclick="closeModal('modal1')">&times;</span>
-                            <div class="modal-content">
-                                <div class="modal-image">
-                                    <img src="../images/cartazes/cartaz_cipriano-e-a-morte-de-cipriano_page-0001.jpg">
-                                    <a class=" watch-button" href="https://youtu.be/zY9SwcgEGVo" target="_blank"><span class="bi-youtube watch-button"></span>&nbsp;&nbsp;assista ao teaser</a>
-                                </div>
-                                <div class="modal-details">
-                                    <h3>CIPRIANO E A MORTE DE CIPRIANO</h3>
-                                    <p>gênero: <strong>FICÇÃO</strong></p>
-                                    <p>ano de lançamento: <strong>2024</strong></p>
-                                    <p>duração: <strong>77 MIN | COLORIDO</strong></p>
-                                    <p>formato: <strong>DCP 2K 5.1 | ASPECT RATIO 1.85:1 = 1998 X 1080 (24 FPS E 48 FPS)</strong></p>
-                                    <p>roteiro | direção | montagem: <strong>DOUGLAS MACHADO</strong></p>
-                                    <p>produção: <strong>GARDÊNIA CURY • DOUGLAS MACHADO</strong></p>
-                                    <p>co-produção: <strong>MATTIAS HÖGBERG</strong></p>
-                                    <p>produção executiva: <strong>GARDÊNIA CURY • CÁSSIA MOURA</strong></p>
-                                    <p>elenco principal: <strong>TARCISO PRADO • CHIQUIM PEREIRA • VILMA ALCÂNTARA • FERNANDO FREITAS</strong></p>
-                                    <p>direção de fotografia: <strong>MATTIAS HÖGBERG</strong></p>
-                                    <p>direção de arte | figurino: <strong>ÁUREO TUPINAMBÁ JÚNIOR</strong></p>
-                                    <p>direção de produção: <strong>SUZANE JALES</strong></p>
-                                    <p>desenho de som | foley | trilha sonora: <strong>DANILO CARVALHO</strong></p>
-                                    <p>efeitos especiais | colorização: <strong>RICARDO ODO (KODÓ)</strong></p>
-                                    <p>som direto: <strong>BO JOHANSSON</strong></p>
-                                    <p>coreografia da Morte: <strong>MARCELO EVELIN</strong></p>
-                                    <p>cenografia: <strong>GUALBERTO JÚNIOR</strong></p>
-                                    <p>xilogravuras: <strong>GABRIEL ARCHANJO</strong></p>
-                                    <p>lettering: <strong>JOÃO PEDRO</strong></p>
-                                    <p>tipografia armorial: <strong>GIOVANA CALDAS • RICARDO GOUVEIA DE MELO</strong></p>
-                                    <p>acessibilidades: <strong>COM ACESSIBILIDADE COMUNICACIONAL</strong></p>
-                                    <p>finalização | DCP: <strong>SILAS ALEXANDRE</strong></p>
-                                    <p>patrocínio: <strong>SECULT/SIEC • ARMAZÉM PARAÍBA</strong></p>
-                                     <p>sinopse: <strong>Um homem velho de nome Cipriano está morto. O seu corpo, porém, segue entre os vivos devido a um pacto com a Morte. O pacto chegou ao fim. Neste filme, é a alma de Cipriano quem narra os últimos acontecimentos. E esta narrativa estabelece um arco construído no próprio estudo de seu realizador com o material bruto filmado em S-16mm, depois de mais de 20 anos de sua filmagem. Vida e morte. Contos, sonhos e religiões. Uma viagem no imaginário latino-americano através de uma longa peregrinação pelos sertões piauienses.</strong></p>                                    
-                                    <button class="modal-button btn custom-btn" onclick="closeModal('modal1')">Fechar</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-3 col-md-4 col-sm-6">
-                        <div class="artists-thumb">
-                            <div class="artists-image-wrap">
-                                <img src="../images/cartazes/cartaz_a-carta-de-esperanca-garcia_page-0001.jpg"
-                                    class="artists-image img-fluid" onclick="openModal('modal2')">
-                            </div>
-                        </div>
-                        <!-- Modal -->
-                        <div id="modal2" class="modal">
-                            <span class="modal-close" onclick="closeModal('modal2')">&times;</span>
-                            <div class="modal-content">
-                                <div class="modal-image">
-                                    <img src="../images/cartazes/cartaz_a-carta-de-esperanca-garcia_page-0001.jpg">
-                                    <a class=" watch-button" href="https://www.youtube.com/watch?v=-WFmsUT1TDM" target="_blank"><span class="bi-youtube watch-button"></span>&nbsp;&nbsp;assista o making-of</a>
-                                </div>
-                                <div class="modal-details">
-                                    <h3>A CARTA DE ESPERANÇA GARCIA</h3>
-                                    <p>gênero: <strong>DOCUMENTÁRIO</strong></p>
-                                    <p>ano de lançamento: <strong>2024</strong></p>
-                                    <p>duração: <strong>105 MIN | COLORIDO</strong></p>
-                                    <p>formato: <strong>DCP 2K 5.1 | ASPECT RATIO 1.85:1 = 1998 X 1080 (24 FPS E 48 FPS)</strong></p>
-                                    <p>roteiro | direção: <strong>DOUGLAS MACHADO</strong></p>
-                                    <p>produção: <strong>DOUGLAS MACHADO • GARDÊNIA CURY</strong></p>
-                                    <p>produção executiva: <strong>GARDÊNIA CURY</strong></p>
-                                    <p>pesquisa: <strong>MARIA SUELI RODRIGUES DE SOUSA</strong></p>
-                                    <p>elenco principal: <strong>ZEZÉ MOTTA • TINA RIBEIRO • CHITARA SOUSA • CATARINA SANTOS • LUÍZA MIRANDA • REGINA SOUSA</strong></p>
-                                    <p>direção de fotografia: <strong>BRENO CÉSAR</strong></p>
-                                    <p>direção de arte: <strong>DAVID CURY</strong></p>
-                                    <p>som direto | desenho de som | trilha sonora: <strong>DANILO CARVALHO</strong></p>
-                                    <p>montagem: <strong>DOUGLAS MACHADO • RICARDO ODO (KODÓ)</strong></p>
-                                    <p>colorização: <strong>RICARDO ODO (KODÓ)</strong></p>
-                                    <p>artista visual (rostos nos lenços): <strong>GABRIEL ARCHANJO</strong></p>
-                                    <p>animação lenços e carta: <strong>JOÃO PEDRO</strong></p>
-                                    <p>lettering | making of: <strong>EDUARDO CRISPIM</strong></p>
-                                    <p>armazenamento digital: <strong>LUCAS M.A.C.</strong></p>
-                                    <p>acessibilidades: <strong>COM ACESSIBILIDADE COMUNICACIONAL</strong></p>
-                                    <p>finalização | DCP: <strong>SILAS ALEXANDRE</strong></p>
-                                    <p>patrocínio: <strong>GOVERNO DO ESTADO DO PIAUÍ • SECULT</strong></p>
-                                     <p>sinopse: <strong>ESPERANÇA GARCIA foi uma mulher brasileira, negra e escravizada. Em 6 de setembro de 1770, ela escreveu uma carta ao governador da Capitania denunciando a violência e maus-tratos sofridos por ela, sua família e demais escravizados. Descoberta no Arquivo Público do Piauí em 1979 pelo antropólogo Luiz Mott, esta carta se tornou um símbolo da resistência nos movimentos negros. Dividido em quatro partes, o documentário estrutura imagens que pensam a realidade atual – nos quilombos e nas cidades – propondo, com isso, uma dupla codificação (existencial e política) relativa à luta por direitos civis. Tendo uma artista do porte de Zezé Motta como eixo organizador, estabelece também uma conversa-debate com outras cinco mulheres negras sobre esta carta e sua atualização para os dias de hoje. Em 2017, Esperança Garcia foi considerada pela OAB estadual a primeira advogada do Piauí e, em 2022, reconhecida pelo Conselho Pleno da OAB/Nacional como a primeira advogada do Brasil.</strong></p>                                    
-                                    <button class="modal-button btn custom-btn" onclick="closeModal('modal2')">Fechar</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-3 col-md-4 col-sm-6">
-                        <div class="artists-thumb">
-                            <div class="artists-image-wrap">
-                                <img src="../images/cartazes/LB2_Suassuna_A3.jpg"
-                                    class="artists-image img-fluid" onclick="openModal('modal3')">
-                            </div>
-                        </div>
-                        <!-- Modal -->
-                        <div id="modal3" class="modal">
-                            <span class="modal-close" onclick="closeModal('modal3')">&times;</span>
-                            <div class="modal-content">
-                                <div class="modal-image">
-                                    <img src="../images/cartazes/LB2_Suassuna_A3.jpg">
-                                    <a class=" watch-button" href="https://youtube.com/watch?v=Xgfu4eDuzE0" target="_blank"><span class="bi-youtube watch-button"></span>&nbsp;&nbsp;assistir ao filme</a>
-                                </div>
-                                <div class="modal-details">
-                                    <h3>O SERTÃOMUNDO DE SUASSUNA</h3>
-                                    <p>gênero: <strong>DOCUMENTÁRIO</strong></p>
-                                    <p>direção | roteiro | fotografia | montagem: <strong>DOUGLAS MACHADO</strong></p>
-                                    <p>produção: <strong>GARDÊNIA CURY • DOUGLAS MACHADO • CÁSSIA MOURA</strong></p>
-                                    <p>elenco: <strong>ARIANO SUASSUNA • RACHEL DE QUEIROZ • WILSON MARTINS • SÁBATO MAGALDI • MANELITO DANTAS • CARLOS NEWTON JÚNIOR • DANTAS SUASSUA • APARECIDA NOGUEIRA • ANTONIO MADUREIRA</strong></p>
-                                    <p>país: <strong>BRASIL</strong></p>
-                                    <p>ano: <strong>2003</strong></p>
-                                    <p>duração: <strong>80 MIN</strong></p>
-                                    <p>cor: <strong>COLORIDO</strong></p>
-                                     <p>sinopse: <strong>O escritor Ariano Suassuna é considerado um dos principais preservadores da cultura brasileira. Com uma escrita que junta, a um só tempo, elementos do simbolismo, do barroco e da literatura de cordel, ele transforma o Sertão no palco das questões humanas de qualquer lugar no mundo.</strong></p>
-                                    <button class="modal-button btn custom-btn" onclick="closeModal('modal3')">Fechar</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-3 col-md-4 col-sm-6">
-                        <div class="artists-thumb">
-                            <div class="artists-image-wrap">
-                                <img src="../images/cartazes/LB1_HDobal_A3.jpg"
-                                    class="artists-image img-fluid" onclick="openModal('modal4')">
-                            </div>
-                        </div>
-                        <!-- Modal -->
-                        <div id="modal4" class="modal">
-                            <span class="modal-close" onclick="closeModal('modal4')">&times;</span>
-                            <div class="modal-content">
-                                <div class="modal-image">
-                                    <img src="../images/cartazes/LB1_HDobal_A3.jpg">
-                                    <a class=" watch-button" href="https://youtube.com/watch?v=jiMaq2wCWE0" target="_blank"><span class="bi-youtube watch-button"></span>&nbsp;&nbsp;assistir ao filme</a>
-                                </div>
-                                <div class="modal-details">
-                                    <h3>H. DOBAL – UM HOMEM PARTICULAR</h3>
-                                    <p>gênero: <strong>DOCUMENTÁRIO</strong></p>
-                                    <p>direção | roteiro | fotografia | montagem: <strong>DOUGLAS MACHADO</strong></p>
-                                    <p>produção: <strong>GARDÊNIA CURY • DOUGLAS MACHADO • CÁSSIA MOURA</strong></p>
-                                    <p>elenco: <strong>H. DOBAL • ALBERTO DA COSTA E SILVA • ÁLVARO PACHECO • CINEAS SANTOS • OLGA SAVARY • IVAN JUNQUEIRA, WILSON MARTINS • JOÃO CLÁUDIO MORENO • M. PAULO NUNES</strong></p>
-                                    <p>país: <strong>BRASIL</strong></p>
-                                    <p>ano: <strong>2002</strong></p>
-                                    <p>duração: <strong>70 MIN</strong></p>
-                                    <p>cor: <strong>COLORIDO</strong></p>
-                                     <p>sinopse: <strong>Documentário sobre o poeta piauiense Hindemburgo Dobal, aborda a fortuna crítica de sua poesia e suas memórias.</strong></p>
-                                    <button class="modal-button btn custom-btn" onclick="closeModal('modal4')">Fechar</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-3 col-md-4 col-sm-6">
-                        <div class="artists-thumb">
-                            <div class="artists-image-wrap">
-                                <img src="../images/cartazes/LB4_AssisBrasil_A3.jpg"
-                                    class="artists-image img-fluid" onclick="openModal('modal8')">
-                            </div>
-                        </div>
-                        <!-- Modal -->
-                        <div id="modal8" class="modal">
-                            <span class="modal-close" onclick="closeModal('modal8')">&times;</span>
-                            <div class="modal-content">
-                                <div class="modal-image">
-                                    <img src="../images/cartazes/LB4_AssisBrasil_A3.jpg">
-                                    <a class=" watch-button" href="https://youtube.com/watch?v=mHW_PkMbCog" target="_blank"><span class="bi-youtube watch-button"></span>&nbsp;&nbsp;Parte 1</a><br>
-                                    <a class=" watch-button" href="https://youtube.com/watch?v=xpq5fV1Vz7g" target="_blank"><span class="bi-youtube watch-button"></span>&nbsp;&nbsp;Parte 2</a><br>                                    
-                                </div>
-                                <div class="modal-details">
-                                    <h3>LUIZ ANTONIO DE ASSIS BRASIL - O CÓDICE E O CINZEL</h3>
-                                    <p>gênero: <strong>DOCUMENTÁRIO</strong></p>
-                                    <p>direção | roteiro | fotografia | montagem: <strong>DOUGLAS MACHADO</strong></p>
-                                    <p>produção: <strong>GARDÊNIA CURY • DOUGLAS MACHADO</strong></p>
-                                    <p>elenco: <strong>LUIZ ANTONIO DE ASSIS BRASIL • MOACYR SCLIAR • DANIEL DE SÁ • JANE TUTIKIAN • CARLOS TOMÉ • MICHEL LAUB • JOEL NETO • ARMINDO TREVISAN • ALCY CHEUÍCHE • SERGIO FARACO • TEOLINDA GERSÃO • MIGUEL SANCHES NETO • VALESCA DE ASSIS</strong></p>
-                                    <p>país: <strong>BRASIL</strong></p>
-                                    <p>ano: <strong>2007</strong></p>
-                                    <p>duração: <strong>143 MIN</strong></p>
-                                    <p>cor: <strong>COLORIDO</strong></p>
-                                     <p>sinopse: <strong>O foco narrador deste filme é um olhar estrangeiro sobre o Pampa. O diretor, dessa forma, faz um paralelo com a literatura produzida pelo escritor gaúcho Luiz Antonio de Assis Brasil, a qual desenvolve esse mesmo olhar. Além do universo literário do autor, apresenta uma reflexão acerca de vários temas que circundam seu universo existencial e estético, como por exemplo, a Oficina de Criação Literária na PUCRS, o Pampa, Porto Alegre, Mozart e sua ascendência açoriana.</strong></p>
-                                    <button class="modal-button btn custom-btn" onclick="closeModal('modal8')">Fechar</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-3 col-md-4 col-sm-6">
-                        <div class="artists-thumb">
-                            <div class="artists-image-wrap">
-                                <img src="../images/cartazes/na_estrada_com_ze_limeira_a3_page-0001.jpg"
-                                    class="artists-image img-fluid" onclick="openModal('modal6')">
-                            </div>
-                        </div>
-                        <!-- Modal -->
-                        <div id="modal6" class="modal">
-                            <span class="modal-close" onclick="closeModal('modal6')">&times;</span>
-                            <div class="modal-content">
-                                <div class="modal-image">
-                                    <img src="../images/cartazes/na_estrada_com_ze_limeira_a3_page-0001.jpg">
-                                    <a class=" watch-button" href="https://youtu.be/Ay1DxjsT6tU" target="_blank"><span class="bi-youtube watch-button"></span>&nbsp;&nbsp;assistir ao filme</a>
-                                </div>
-                                <div class="modal-details">
-                                    <h3>NA ESTRADA COM ZÉ LIMEIRA</h3>
-                                    <p>gênero: <strong>DOCUMENTÁRIO</strong></p>
-                                    <p>direção | roteiro | fotografia | montagem: <strong>DOUGLAS MACHADO</strong></p>
-                                    <p>produção: <strong>GARDÊNIA CURY • DOUGLAS MACHADO</strong></p>
-                                    <p>elenco: <strong>SEU ANTONIO • SEU INÁCIO • JOÃO FURIBA • NENEN PATRIOTA • ZÉ DE CAZUZA • NESTOR ROLIM • APARECIDA NOGUEIRA • CARLOS NEWTON JÚNIOR • PEDRO AMORIM • JESSIER QUIRINO</strong></p>
-                                    <p>ano: <strong>2011</strong></p>
-                                    <p>duração: <strong>90 MIN</strong></p>
-                                    <p>cor: <strong>COLORIDO</strong></p>
-                                     <p>sinopse: <strong>Uma equipe de filmagem percorre os Estados da Paraíba e Pernambuco em busca das memórias do poeta e repentista paraibano Zé Limeira [1886-1954]. Nesta viagem pelo Sertão, a procura dessas informações revela a construção do próprio documentário.</strong></p>
-                                    <button class="modal-button btn custom-btn" onclick="closeModal('modal6')">Fechar</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-3 col-md-4 col-sm-6">
-                        <div class="artists-thumb">
-                            <div class="artists-image-wrap">
-                                <img src="../images/cartazes/Um_Corpo_Subterraneo_A3.jpg"
-                                    class="artists-image img-fluid" onclick="openModal('modal10')">
-                            </div>
-                        </div>
-                        <!-- Modal -->
-                        <div id="modal10" class="modal">
-                            <span class="modal-close" onclick="closeModal('modal10')">&times;</span>
-                            <div class="modal-content">
-                                <div class="modal-image">
-                                    <img src="../images/cartazes/Um_Corpo_Subterraneo_A3.jpg">
-                                    <a class=" watch-button" href="https://youtu.be/v8WPbGAZsSA" target="_blank"><span class="bi-youtube watch-button"></span>&nbsp;&nbsp;assistir ao filme</a>
-                                </div>
-                                <div class="modal-details">
-                                    <h3>UM CORPO SUBTERRÂNEO</h3>
-                                    <p>gênero: <strong>DOCUMENTÁRIO</strong></p>
-                                    <p>direção | roteiro | fotografia | montagem: <strong>DOUGLAS MACHADO</strong></p>
-                                    <p>produção: <strong>GARDÊNIA CURY • DOUGLAS MACHADO</strong></p>
-                                    <p>elenco: <strong>LEONOR • DIDEKA • FRANCELINA • TERESINHA • ELIAS • INÁCIA</strong></p>
-                                    <p>ano: <strong>2006</strong></p>
-                                    <p>duração: <strong>52 MIN</strong></p>
-                                    <p>cor: <strong>COLORIDO</strong></p>
-                                     <p>sinopse: <strong>Uma viagem do extremo norte ao extremo sul do Piauí em busca da memória audiovisual do homem piauiense, o seu "corpo" [geografia humana + circunstâncias] e o seu viés "subterrâneo" [espírito + corpo enterrado]. Os cemitérios são os pontos que alinhavam esta trajetória e a certidão de nascimento o fio condutor desta narrativa.</strong></p>
-                                    <button class="modal-button btn custom-btn" onclick="closeModal('modal10')">Fechar</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-3 col-md-4 col-sm-6">
-                        <div class="artists-thumb">
-                            <div class="artists-image-wrap">
-                                <img src="../images/cartazes/LB5_AdaCeSILVA_A3.jpg"
-                                    class="artists-image img-fluid" onclick="openModal('modal9')">
-                            </div>
-                        </div>
-                        <!-- Modal -->
-                        <div id="modal9" class="modal">
-                            <span class="modal-close" onclick="closeModal('modal9')">&times;</span>
-                            <div class="modal-content">
-                                <div class="modal-image">
-                                    <img src="../images/cartazes/LB5_AdaCeSILVA_A3.jpg">
-                                    <a class=" watch-button" href="https://youtube.com/watch?v=uIrDOaR1JOo" target="_blank"><span class="bi-youtube watch-button"></span>&nbsp;&nbsp;assistir ao filme</a>
-                                </div>
-                                <div class="modal-details">
-                                    <h3>ALBERTO DA COSTA E SILVA - O RETORNO DO FILHO</h3>
-                                    <p>gênero: <strong>DOCUMENTÁRIO</strong></p>
-                                    <p>direção | roteiro | fotografia | montagem: <strong>DOUGLAS MACHADO</strong></p>
-                                    <p>produção: <strong>GARDÊNIA CURY • DOUGLAS MACHADO</strong></p>
-                                    <p>still: <strong>GARDÊNIA CURY</strong></p>
-                                    <p>elenco: <strong>ALBERTO DA COSTA E SILVA</strong></p>
-                                    <p>país: <strong>BRASIL</strong></p>
-                                    <p>ano: <strong>2009</strong></p>
-                                    <p>duração: <strong>52 MIN</strong></p>
-                                    <p>cor: <strong>COLORIDO</strong></p>
-                                     <p>sinopse: <strong>Uma viagem de regresso a Amarante, no Piauí, feita pelo poeta e historiador Alberto da Costa e Silva. Amarante é o lugar onde nasceu o seu pai Da Costa e Silva [1885-1950], um dos poetas piauienses mais afinados com a sensibilidade popular. Um documentário sobre continuidade, aquilo que foi do pai, está no filho mas, em certo sentido, o filho recria o pai. Neste sutil jogo, ambos saem engrandecidos, em suas dimensões artísticas e humanas.</strong></p>
-                                    <button class="modal-button btn custom-btn" onclick="closeModal('modal9')">Fechar</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-3 col-md-4 col-sm-6">
-                        <div class="artists-thumb">
-                            <div class="artists-image-wrap">
-                                <img src="../images/cartazes/LB3_Vilaca_A3.jpg"
-                                    class="artists-image img-fluid" onclick="openModal('modal7')">
-                            </div>
-                        </div>
-                        <!-- Modal -->
-                        <div id="modal7" class="modal">
-                            <span class="modal-close" onclick="closeModal('modal7')">&times;</span>
-                            <div class="modal-content">
-                                <div class="modal-image">
-                                    <img src="../images/cartazes/LB3_Vilaca_A3.jpg">
-                                    <a class=" watch-button" href="https://youtube.com/watch?v=63JCjd7IVyk" target="_blank"><span class="bi-youtube watch-button"></span>&nbsp;&nbsp;assistir ao filme</a>
-                                </div>
-                                <div class="modal-details">
-                                    <h3>MARCOS VINICIOS VILAÇA - O ARTESÃO DA PALAVRA</h3>
-                                    <p>gênero: <strong>DOCUMENTÁRIO</strong></p>
-                                    <p>direção | roteiro | fotografia | montagem: <strong>DOUGLAS MACHADO</strong></p>
-                                    <p>produção: <strong>GARDÊNIA CURY • DOUGLAS MACHADO • CÁSSIA MOURA</strong></p>
-                                    <p>elenco: <strong>MARCOS VINICIOS VILAÇA • NÉLIDA PIÑON • ALBERTO DA COSTA E SILVA • LÊDO IVO • ROBERTO CAVALCANTI DE ALBUQUERQUE • PAULO HERKENHOFF • JOSÉ SARNEY • MARCUS ACCIOLY • JANETE COSTA</strong></p>
-                                    <p>país: <strong>BRASIL</strong></p>
-                                    <p>ano: <strong>2005</strong></p>
-                                    <p>duração: <strong>80 MIN</strong></p>
-                                    <p>cor: <strong>COLORIDO</strong></p>
-                                     <p>sinopse: <strong>Através de uma viagem de caminhão – de São Miguel das Missões/RS a Olinda/PE – o diretor Douglas Machado traça um diálogo com o escritor Marcos Vinicios Vilaça e seu universo literário. A ação do filme ocorre de maneira paralela, a viagem propriamente dita e os passeios de carro com o escritor, seja no Recife, Rio de Janeiro ou Brasília.</strong></p>
-                                    <button class="modal-button btn custom-btn" onclick="closeModal('modal7')">Fechar</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-3 col-md-4 col-sm-6">
-                        <div class="artists-thumb">
-                            <div class="artists-image-wrap">
-                                <img src="../images/cartazes/lb6_wmartins_a3_page-0001.jpg"
-                                    class="artists-image img-fluid" onclick="openModal('modal5')">
-                            </div>
-                        </div>
-                        <!-- Modal -->
-                        <div id="modal5" class="modal">
-                            <span class="modal-close" onclick="closeModal('modal5')">&times;</span>
-                            <div class="modal-content">
-                                <div class="modal-image">
-                                    <img src="../images/cartazes/lb6_wmartins_a3_page-0001.jpg">
-                                    <a class=" watch-button" href="https://youtube.com/watch?v=H60vWfQ4oek" target="_blank"><span class="bi-youtube watch-button"></span>&nbsp;&nbsp;assistir ao filme</a>
-                                </div>
-                                <div class="modal-details">
-                                    <h3>WILSON MARTINS – A CONSCIÊNCIA DA CRÍTICA</h3>
-                                    <p>gênero: <strong>DOCUMENTÁRIO</strong></p>
-                                    <p>direção | roteiro | fotografia | montagem: <strong>DOUGLAS MACHADO</strong></p>
-                                    <p>produção: <strong>GARDÊNIA CURY • DOUGLAS MACHADO</strong></p>
-                                    <p>produtor associado: <strong>MARDEN MACHADO</strong></p>
-                                    <p>elenco: <strong>WILSON MARTINS • AFFONSO ROMANO DE SANT´ANNA • MIGUEL SANCHES NETO • MOACYR SCLIAR • LUIZ ANTONIO DE ASSIS BRASIL • KENNETH KRABBENHOFT</strong></p>
-                                    <p>país: <strong>BRASIL</strong></p>
-                                    <p>ano: <strong>2012</strong></p>
-                                    <p>duração: <strong>62 MIN</strong></p>
-                                    <p>cor: <strong>COLORIDO</strong></p>
-                                     <p>sinopse: <strong>O documentário tem como base uma longa entrevista gravada com Wilson Martins, em 2002. Nos anos subseqüentes, novos encontros e novas entrevistas fizeram deste documentário um tecido de memórias gravado em Curitiba, Rio de Janeiro, Porto Alegre e Nova Iorque, nos EUA.</strong></p>
-                                    <button class="modal-button btn custom-btn" onclick="closeModal('modal5')">Fechar</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- <div class="col-lg-3 col-md-4 col-sm-6">
-                        <div class="artists-thumb">
-                            <div class="artists-image-wrap">
-                                <img src="../images/cartazes/cartaz_folhetos_do_sertao.jpg"
-                                    class="artists-image img-fluid" onclick="openModal('modal11')">
-                            </div>
-                        </div>
-                        <div id="modal11" class="modal">
-                            <span class="modal-close" onclick="closeModal('modal11')">&times;</span>
-                            <div class="modal-content">
-                                <div class="modal-image">
-                                    <img src="../images/cartazes/cartaz_folhetos_do_sertao.jpg">
-                                    <a class=" watch-button" href="https://youtu.be/cvCaTUPwGwc" target="_blank"><span class="bi-youtube watch-button"></span>&nbsp;&nbsp;assistir ao filme</a>
-                                </div>
-                                <div class="modal-details">
-                                    <p><h3>FOLHETOS DO SERTÃO [vol.1]: <strong>POESIA NA MADEIRA</H3></strong></p>
-                                    <p>gênero: <strong>DOCUMENTÁRIO</strong></p>
-                                    <p>direção | roteiro | fotografia | montagem: <strong>DOUGLAS MACHADO</strong></p>
-                                    <p>produção: <strong>GARDÊNIA CURY • DOUGLAS MACHADO</strong></p>
-                                    <p>Direção de Produção | Still: <strong>GARDÊNIA CURY</strong></p>
-                                    <p>elenco: <strong>YOLANDA CARVALHO</strong></p>
-                                    <p>ano: <strong>2014</strong></p>
-                                    <p>duração: <strong>20 MIN</strong></p>
-                                    <p>cor: <strong>COLORIDO</strong></p>
-                                         <p>sinopse: <strong>Uma parte significativa da Literatura de Cordel usa a xilographia como arte para as capas de seus folhetos. A capa é o que se vê primeiramente. Por esta razão, escolhemos dar início a esta Série com um artista de xilographia, Yolanda Carvalho. A xilographia que ela produziu durante as gravações será usada como capa de um Folheto no final do projeto.</strong></p>
-                                    <button class="modal-button btn custom-btn" onclick="closeModal('modal11')">Fechar</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div> -->
-                    
-                    <div class="col-lg-6 col-12">
-                        <div class="artists-thumb">
-                            <div class="artists-image-wrap">
-                                <img src="../images/cartazes/cartaz_ensaios_intimos_e_imperfeitos.jpg"
-                                    class="artists-image img-fluid" onclick="openModal('modal12')">
-                            </div>
-                        </div>
-                        <!-- Modal -->
-                        <div id="modal12" class="modal">
-                            <span class="modal-close" onclick="closeModal('modal12')">&times;</span>
-                            <div class="modal-content">
-                                <div class="modal-image">
-                                    <img src="../images/cartazes/cartaz_ensaios_intimos_e_imperfeitos.jpg">
-                                    <a class=" watch-button" href="https://youtube.com/watch?v=66AcpoQ3dLM" target="_blank"><span class="bi-youtube watch-button"></span>&nbsp;&nbsp;Ensaios I: Sobre o Outrora</a><br>
-                                    <a class=" watch-button" href="https://youtube.com/watch?v=vBtEJRQo5a8" target="_blank"><span class="bi-youtube watch-button"></span>&nbsp;&nbsp;Ensaios II: Sobre o Tempo</a><br>
-                                    <a class=" watch-button" href="https://youtube.com/watch?v=xBBP8ia3Duc" target="_blank"><span class="bi-youtube watch-button"></span>&nbsp;&nbsp;Ensaios III: Sobre o Livro e o Escritor</a><br>
-                                    <a class=" watch-button" href="https://youtube.com/watch?v=oUE5-Ga7eWE" target="_blank"><span class="bi-youtube watch-button"></span>&nbsp;&nbsp;Ensaios: Não Saberes II - Da alma</a><br>
-                                    <a class=" watch-button" href="https://youtube.com/watch?v=qtPMGNOqt1o" target="_blank"><span class="bi-youtube watch-button"></span>&nbsp;&nbsp;Ensaios: Não Saberes X - Dos desconhecidos</a><br>
-                                    <a class=" watch-button" href="https://youtube.com/watch?v=eOWRLGAZGGA" target="_blank"><span class="bi-youtube watch-button"></span>&nbsp;&nbsp;Ensaios: Tempo III - Do que passa</a><br>
-                                    <a class=" watch-button" href="https://youtube.com/watch?v=XfJyzKc29QY" target="_blank"><span class="bi-youtube watch-button"></span>&nbsp;&nbsp;Ensaios: Tempo VIII - Das horas do dia</a><br>
-                                </div>
-                                <div class="modal-details">
-                                    <h3>ENSAIOS ÍNTIMOS E IMPERFEITOS [vol.1]</h3>
-                                    <p>gênero: <strong>DOCUMENTÁRIO</strong></p>
-                                    <p>da obra: <strong>ENSAIOS ÍNTIMOS E IMPERFEITOS</strong></p>
-                                    <p>escritor | voz: <strong>LUIZ ANTONIO DE ASSIS BRASIL</strong></p>
-                                    <p>direção | fotografia | entrevistas: <strong>DOUGLAS MACHADO</strong></p>
-                                    <p>produção: <strong>DOUGLAS MACHADO • GARDÊNIA CURY</strong></p>
-                                    <p>produção executiva: <strong>JOÃO MARCELLO CLAUDINO</strong></p>
-                                    <p>edição: <strong>DOUGLAS MACHADO • GRAX MEDINA • LUCAS MACHADO • LÍVIO GALENO</strong></p>
-                                    <p>ano: <strong>2015-2018</strong></p>
-                                    <p>duração: <strong>7 CURTAS COM MÉDIA DE 10MIN CADA</strong></p>
-                                    <p>cor: <strong>COLORIDO</strong></p>
-                                     <p>sinopse: <strong>Uma visita ao livro Ensaios íntimos e imperfeitos, de Luiz Antonio de Assis Brasil, com o autor em cena. São filmes de curta duração, em que o romancista externa suas reflexões sobre a vida para o olhar do cineasta Douglas Machado. Um encontro entre a Literatura e o Cinema, através da sensibilidade de dois artistas de nosso tempo.</strong></p>                                    
-                                    <button class="modal-button btn custom-btn" onclick="closeModal('modal12')">Fechar</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-        </section>
-
-    </main>
-
-    <footer class="site-footer">
-        <div class="site-footer-top">
-            <div class="container">
-                <div class="row">
-
-                    <div class="col-lg-6 col-7">
-                        <h3 class="text-white mb-lg-0"><img style="width: 65px" src="../images/logo.png" />&nbsp&nbsp trinca/filmes</h3>
-                    </div>
-
-                    <div class="col-lg-6 col-5 d-flex justify-content-lg-end align-items-center">
-                        <ul class="social-icon d-flex justify-content-lg-end">
-                            <li class="social-icon-item">
-                                <a href="https://www.youtube.com/@trincafilmes" class="social-icon-link">
-                                    <span class="bi-youtube"></span>
-                                </a>
-                            </li>
-                            <li class="social-icon-item">
-                                <a href="https://www.instagram.com/trincafilmes/" class="social-icon-link">
-                                    <span class="bi-instagram"></span>
-                                </a>
-                            </li>
-                            <li class="social-icon-item">
-                                <a href="https://www.facebook.com/profile.php?id=712642976" class="social-icon-link">
-                                    <span class="bi-facebook"></span>
-                                </a>
-                            </li>
-
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-
+      <nav class="navbar navbar-expand-lg" style="background-color: #000;">
         <div class="container">
-            <div class="row">
-
-                <div class="col-lg-5 col-12 mb-4 pb-2">
-                    <h5 class="site-footer-title mb-3">menu</h5>
-
-                    <ul class="site-footer-links">
-                        <li class="site-footer-link-item">
-                            <a href="/" class="site-footer-link">home</a>
-                        </li>
-
-                        <li class="site-footer-link-item">
-                            <a href="/filmes" class="site-footer-link">filmes</a>
-                        </li>
-
-                        <li class="site-footer-link-item">
-                            <a href="/fotografias" class="site-footer-link">fotografias</a>
-                        </li>
-
-                        <li class="site-footer-link-item">
-                            <a href="/sobre" class="site-footer-link">sobre</a>
-                        </li>
-
-                    </ul>
-                </div>
-
-                <div class="col-lg-4 col-md-6 col-12 mb-4 mb-lg-0">
-                    <h5 class="site-footer-title mb-3">contato</h5>
-
-                    <p class="text-white d-flex mb-1">
-                        <a href="tel: 086-9987-5896" class="site-footer-link">
-                            +55 86 99987-5896
-                        </a>
-                    </p>
-
-                    <p class="text-white d-flex">
-                        <a href="mailto:trincafilmes@trincafilmes.com.br" class="site-footer-link">
-                            trincafilmes@trincafilmes.com.br
-                        </a>
-                    </p>
-                </div>
-
-                <div class="col-lg-3 col-md-6 col-11 mb-4 mb-lg-0 mb-md-0">
-                    <h5 class="site-footer-title mb-3">endereço</h5>
-
-                    <p class="text-white d-flex mt-3 mb-2">
-                        Rua João Cabral, 719 / 202<br>
-                        Centro/Norte<br>
-                        Teresina - Piauí - Brasil<br>
-                        CEP: 64000-030</p>
-
-                    <!-- <a class="link-fx-1 color-contrast-higher mt-3" href="#">
-                        <span>Our Maps</span>
-                        <svg class="icon" viewBox="0 0 32 32" aria-hidden="true">
-                            <g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
-                                <circle cx="16" cy="16" r="15.5"></circle>
-                                <line x1="10" y1="18" x2="16" y2="12"></line>
-                                <line x1="16" y1="12" x2="22" y2="18"></line>
-                            </g>
-                        </svg>
-                    </a> -->
-                </div>
-            </div>
+          <a class="navbar-brand" href="../">
+            <img style="width: 100px" src="../images/logo.png" />&nbsp&nbsp trinca/filmes </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav align-items-lg-center ms-auto me-lg-5">
+              <li class="nav-item">
+                <a class="nav-link click-scroll" href="../">home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link click-scroll active" href="../filmes">filmes</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link click-scroll" href="../fotografias">fotografias</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link click-scroll" href="../sobre">sobre</a>
+              </li>
+            </ul>
+            <!-- <a href="sobre.html" class="btn custom-btn d-lg-block d-none">sobre</a> -->
+          </div>
         </div>
-
-        <div class="site-footer-bottom">
-            <div class="container">
-                <div class="row">
-
-                    <div class="col-lg-12 col-12 mt-5">
-                        <p class="copyright-text">©2024TRINCAFILMES</p>
-                        <small style="color: rgb(187, 186, 186);">desenvolvido por <a class="site-footer-link" target="_blank" href="https://lucasmac.com">olucasmac</a></small>
-                    </div>
-
-                    <!-- <div class="col-lg-8 col-12 mt-lg-5">
-                        <ul class="site-footer-links">
-                            <li class="site-footer-link-item">
-                                <a href="#" class="site-footer-link">Terms &amp; Conditions</a>
-                            </li>
-
-                            <li class="site-footer-link-item">
-                                <a href="#" class="site-footer-link">Privacy Policy</a>
-                            </li>
-
-                            <li class="site-footer-link-item">
-                                <a href="#" class="site-footer-link">Your Feedback</a>
-                            </li>
-                        </ul>
-                    </div> -->
-                </div>
+      </nav>
+      <section class="artists-section section-padding" id="section_2">
+        <div class="container">
+          <div class="row justify-content" style="padding-top: 51px;">
+            <div class="col-12 text-center">
+              <h2 class="mb-4" style=" text-align: justify;">filmes</h2>
             </div>
+            <div class="col-lg-3 col-md-4 col-sm-6">
+              <div class="artists-thumb">
+                <div class="artists-image-wrap">
+                  <img src="../images/cartazes/cartaz_cipriano-e-a-morte-de-cipriano_page-0001.jpg" class="artists-image img-fluid" onclick="openModal('modal1')">
+                </div>
+              </div>
+              <!-- Modal -->
+              <div id="modal1" class="modal">
+                <span class="modal-close" onclick="closeModal('modal1')">&times;</span>
+                <div class="modal-content">
+                  <div class="modal-image">
+                    <img src="../images/cartazes/cartaz_cipriano-e-a-morte-de-cipriano_page-0001.jpg">
+                    <a class=" watch-button" href="https://youtu.be/zY9SwcgEGVo" target="_blank">
+                      <span class="bi-youtube watch-button"></span>&nbsp;&nbsp;assista ao teaser </a>
+                  </div>
+                  <div class="modal-details">
+                    <h3>Cipriano e a morte de Cipriano</h3>
+                    <p>gênero: <strong>Ficção</strong>
+                    </p>
+                    <p>ano de lançamento: <strong>2024</strong>
+                    </p>
+                    <p>duração: <strong>77 min | Colorido</strong>
+                    </p>
+                    <p>formato: <strong>DCP 2K 5.1 | Aspect ratio 1.85:1 = 1998 x 1080 (24 fps e 48 fps)</strong>
+                    </p>
+                    <p>roteiro | direção | montagem: <strong>Douglas Machado</strong>
+                    </p>
+                    <p>produção: <strong>Gardênia Cury • Douglas Machado</strong>
+                    </p>
+                    <p>co-produção: <strong>Mattias Högberg</strong>
+                    </p>
+                    <p>produção executiva: <strong>Gardênia Cury • Cássia Moura</strong>
+                    </p>
+                    <p>elenco principal: <strong>Tarciso Prado • Chiquim Pereira • Vilma Alcântara • Fernando Freitas</strong>
+                    </p>
+                    <p>direção de fotografia: <strong>Mattias Högberg</strong>
+                    </p>
+                    <p>direção de arte | figurino: <strong>Áureo Tupinambá Júnior</strong>
+                    </p>
+                    <p>direção de produção: <strong>Suzane Jales</strong>
+                    </p>
+                    <p>desenho de som | foley | trilha sonora: <strong>Danilo Carvalho</strong>
+                    </p>
+                    <p>efeitos especiais | colorização: <strong>Ricardo Odo (Kodó)</strong>
+                    </p>
+                    <p>som direto: <strong>Bo Johansson</strong>
+                    </p>
+                    <p>coreografia da Morte: <strong>Marcelo Evelin</strong>
+                    </p>
+                    <p>cenografia: <strong>Gualberto Júnior</strong>
+                    </p>
+                    <p>xilogravuras: <strong>Gabriel Archanjo</strong>
+                    </p>
+                    <p>lettering: <strong>João Pedro</strong>
+                    </p>
+                    <p>tipografia armorial: <strong>Giovana Caldas • Ricardo Gouveia de Melo</strong>
+                    </p>
+                    <p>acessibilidades: <strong>com acessibilidade comunicacional</strong>
+                    </p>
+                    <p>finalização | DCP: <strong>Silas Alexandre</strong>
+                    </p>
+                    <p>patrocínio: <strong>SECULT/SIEC • Armazém Paraíba</strong>
+                    </p>
+                    <p>sinopse: <strong>Um homem velho de nome Cipriano está morto. O seu corpo, porém, segue entre os vivos devido a um pacto com a Morte. O pacto chegou ao fim. Neste filme, é a alma de Cipriano quem narra os últimos acontecimentos. E esta narrativa estabelece um arco construído no próprio estudo de seu realizador com o material bruto filmado em S-16mm, depois de mais de 20 anos de sua filmagem. Vida e morte. Contos, sonhos e religiões. Uma viagem no imaginário latino-americano através de uma longa peregrinação pelos sertões piauienses.</strong>
+                    </p>
+                    <button class="modal-button btn custom-btn" onclick="closeModal('modal1')">Fechar</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-6">
+              <div class="artists-thumb">
+                <div class="artists-image-wrap">
+                  <img src="../images/cartazes/cartaz_a-carta-de-esperanca-garcia_page-0001.jpg" class="artists-image img-fluid" onclick="openModal('modal2')">
+                </div>
+              </div>
+              <!-- Modal -->
+              <div id="modal2" class="modal">
+                <span class="modal-close" onclick="closeModal('modal2')">&times;</span>
+                <div class="modal-content">
+                  <div class="modal-image">
+                    <img src="../images/cartazes/cartaz_a-carta-de-esperanca-garcia_page-0001.jpg">
+                    <a class=" watch-button" href="https://www.youtube.com/watch?v=-WFmsUT1TDM" target="_blank">
+                      <span class="bi-youtube watch-button"></span>&nbsp;&nbsp;assista o making-of </a>
+                  </div>
+                  <div class="modal-details">
+                    <h3>A carta de Esperança Garcia</h3>
+                    <p>gênero: <strong>Documentário</strong>
+                    </p>
+                    <p>ano de lançamento: <strong>2024</strong>
+                    </p>
+                    <p>duração: <strong>105 min | Colorido</strong>
+                    </p>
+                    <p>formato: <strong>DCP 2K 5.1 | Aspect ratio 1.85:1 = 1998 x 1080 (24 fps e 48 fps)</strong>
+                    </p>
+                    <p>roteiro | direção: <strong>Douglas Machado</strong>
+                    </p>
+                    <p>produção: <strong>Douglas Machado • Gardênia Cury</strong>
+                    </p>
+                    <p>produção executiva: <strong>Gardênia Cury</strong>
+                    </p>
+                    <p>pesquisa: <strong>Maria Sueli Rodrigues de Sousa</strong>
+                    </p>
+                    <p>elenco principal: <strong>Zezé Motta • Tina Ribeiro • Chitara Sousa • Catarina Santos • Luíza Miranda • Regina Sousa</strong>
+                    </p>
+                    <p>direção de fotografia: <strong>Breno César</strong>
+                    </p>
+                    <p>direção de arte: <strong>David Cury</strong>
+                    </p>
+                    <p>som direto | desenho de som | trilha sonora: <strong>Danilo Carvalho</strong>
+                    </p>
+                    <p>montagem: <strong>Douglas Machado • Ricardo Odo (Kodó)</strong>
+                    </p>
+                    <p>colorização: <strong>Ricardo Odo (Kodó)</strong>
+                    </p>
+                    <p>artista visual (rostos nos lenços): <strong>Gabriel Archanjo</strong>
+                    </p>
+                    <p>animação lenços e carta: <strong>João Pedro</strong>
+                    </p>
+                    <p>lettering | making of: <strong>Eduardo Crispim</strong>
+                    </p>
+                    <p>armazenamento digital: <strong>Lucas M.A.C.</strong>
+                    </p>
+                    <p>acessibilidades: <strong>com acessibilidade comunicacional</strong>
+                    </p>
+                    <p>finalização | DCP: <strong>Silas Alexandre</strong>
+                    </p>
+                    <p>patrocínio: <strong>Governo do Estado do Piauí • SECULT</strong>
+                    </p>
+                    <p>sinopse: <strong>ESPERANÇA GARCIA foi uma mulher brasileira, negra e escravizada. Em 6 de setembro de 1770, ela escreveu uma carta ao governador da Capitania denunciando a violência e maus-tratos sofridos por ela, sua família e demais escravizados. Descoberta no Arquivo Público do Piauí em 1979 pelo antropólogo Luiz Mott, esta carta se tornou um símbolo da resistência nos movimentos negros. Dividido em quatro partes, o documentário estrutura imagens que pensam a realidade atual – nos quilombos e nas cidades – propondo, com isso, uma dupla codificação (existencial e política) relativa à luta por direitos civis. Tendo uma artista do porte de Zezé Motta como eixo organizador, estabelece também uma conversa-debate com outras cinco mulheres negras sobre esta carta e sua atualização para os dias de hoje. Em 2017, Esperança Garcia foi considerada pela OAB estadual a primeira advogada do Piauí e, em 2022, reconhecida pelo Conselho Pleno da OAB/Nacional como a primeira advogada do Brasil.</strong>
+                    </p>
+                    <button class="modal-button btn custom-btn" onclick="closeModal('modal2')">Fechar</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-6">
+              <div class="artists-thumb">
+                <div class="artists-image-wrap">
+                  <img src="../images/cartazes/LB2_Suassuna_A3.jpg" class="artists-image img-fluid" onclick="openModal('modal3')">
+                </div>
+              </div>
+              <!-- Modal -->
+              <div id="modal3" class="modal">
+                <span class="modal-close" onclick="closeModal('modal3')">&times;</span>
+                <div class="modal-content">
+                  <div class="modal-image">
+                    <img src="../images/cartazes/LB2_Suassuna_A3.jpg">
+                    <a class=" watch-button" href="https://youtube.com/watch?v=Xgfu4eDuzE0" target="_blank">
+                      <span class="bi-youtube watch-button"></span>&nbsp;&nbsp;assistir ao filme </a>
+                  </div>
+                  <div class="modal-details">
+                    <h3>O SERTÃOMUNDO DE SUASSUNA</h3>
+                    <p>gênero: <strong>Documentário</strong>
+                    </p>
+                    <p>direção | roteiro | fotografia | montagem: <strong>Douglas Machado</strong>
+                    </p>
+                    <p>produção: <strong>Gardênia Cury • Douglas Machado • Cássia Moura</strong>
+                    </p>
+                    <p>trilha sonora original: <strong>Sérgio Mattos</strong> — música de encerramento: <strong>Egildo Vieira</strong>
+                    </p>
+                    <p>consultoria: <strong>Carlos Newton Júnior</strong>
+                    </p>
+                    <p>elenco: <strong>Ariano Suassuna • Rachel de Queiroz • Wilson Martins • Sábato Magaldi • Manelito Dantas • Carlos Newton Júnior • Dantas Suassua • Aparecida Nogueira • Antonio Madureira</strong>
+                    </p>
+                    <p>país: <strong>Brasil</strong>
+                    </p>
+                    <p>ano: <strong>2003</strong>
+                    </p>
+                    <p>duração: <strong>80 min</strong>
+                    </p>
+                    <p>cor: <strong>Colorido</strong>
+                    </p>
+                    <p>sinopse: <strong>O escritor Ariano Suassuna é considerado um dos principais preservadores da cultura brasileira. Com uma escrita que junta, a um só tempo, elementos do simbolismo, do barroco e da literatura de cordel, ele transforma o Sertão no palco das questões humanas de qualquer lugar no mundo.</strong>
+                    </p>
+                    <button class="modal-button btn custom-btn" onclick="closeModal('modal3')">Fechar</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-6">
+              <div class="artists-thumb">
+                <div class="artists-image-wrap">
+                  <img src="../images/cartazes/LB1_HDobal_A3.jpg" class="artists-image img-fluid" onclick="openModal('modal4')">
+                </div>
+              </div>
+              <!-- Modal -->
+              <div id="modal4" class="modal">
+                <span class="modal-close" onclick="closeModal('modal4')">&times;</span>
+                <div class="modal-content">
+                  <div class="modal-image">
+                    <img src="../images/cartazes/LB1_HDobal_A3.jpg">
+                    <a class=" watch-button" href="https://youtube.com/watch?v=jiMaq2wCWE0" target="_blank">
+                      <span class="bi-youtube watch-button"></span>&nbsp;&nbsp;assistir ao filme </a>
+                  </div>
+                  <div class="modal-details">
+                    <h3>H. DOBAL – UM HOMEM PARTICULAR</h3>
+                    <p>gênero: <strong>Documentário</strong>
+                    </p>
+                    <p>direção | roteiro | fotografia: <strong>Douglas Machado</strong>
+                    </p>
+                    <p>produção: <strong>Gardênia Cury • Douglas Machado • Cássia Moura</strong>
+                    </p>
+                    <p>edição: <strong>Regis Pires</strong>
+                    </p>
+                    <p>animação gráfica: <strong>Eduardo Crispim</strong>
+                    </p>
+                    <p>trilha sonora original: <strong>Lado 2 Estéreo</strong>
+                    </p>
+                    <p>elenco: <strong>H. Dobal • Alberto da Costa e Silva • Álvaro Pacheco • Cineas Santos • Olga Savary • Ivan Junqueira • Wilson Martins • João Cláudio Moreno • M. Paulo Nunes</strong>
+                    </p>
+                    <p>país: <strong>Brasil</strong>
+                    </p>
+                    <p>ano: <strong>2002</strong>
+                    </p>
+                    <p>duração: <strong>70 min</strong>
+                    </p>
+                    <p>cor: <strong>Colorido</strong>
+                    </p>
+                    <p>sinopse: <strong>Documentário sobre o poeta piauiense Hindemburgo Dobal, aborda a fortuna crítica de sua poesia e suas memórias.</strong>
+                    </p>
+                    <button class="modal-button btn custom-btn" onclick="closeModal('modal4')">Fechar</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-6">
+              <div class="artists-thumb">
+                <div class="artists-image-wrap">
+                  <img src="../images/cartazes/LB4_AssisBrasil_A3.jpg" class="artists-image img-fluid" onclick="openModal('modal8')">
+                </div>
+              </div>
+              <!-- Modal -->
+              <div id="modal8" class="modal">
+                <span class="modal-close" onclick="closeModal('modal8')">&times;</span>
+                <div class="modal-content">
+                  <div class="modal-image">
+                    <img src="../images/cartazes/LB4_AssisBrasil_A3.jpg">
+                    <a class=" watch-button" href="https://youtube.com/watch?v=mHW_PkMbCog" target="_blank">
+                      <span class="bi-youtube watch-button"></span>&nbsp;&nbsp;Parte 1 </a>
+                    <br>
+                    <a class=" watch-button" href="https://youtube.com/watch?v=xpq5fV1Vz7g" target="_blank">
+                      <span class="bi-youtube watch-button"></span>&nbsp;&nbsp;Parte 2 </a>
+                    <br>
+                  </div>
+                  <div class="modal-details">
+                    <h3>LUIZ ANTONIO DE ASSIS BRASIL - O CÓDICE E O CINZEL</h3>
+                    <p>gênero: <strong>Documentário</strong>
+                    </p>
+                    <p>direção | roteiro | fotografia | montagem: <strong>Douglas Machado</strong>
+                    </p>
+                    <p>produção: <strong>Gardênia Cury • Douglas Machado</strong>
+                    </p>
+                    <p>trilha sonora: <strong>Sérgio Mattos</strong>
+                    </p>
+                    <p>elenco: <strong>Luiz Antonio de Assis Brasil • Moacyr Scliar • Daniel de Sá • Jane Tutikian • Carlos Tomé • Michel Laub • Joel Neto • Armindo Trevisan • Alcy Cheuîche • Sergio Faraco • Teolinda Gersão • Miguel Sanches Neto • Valesca de Assis</strong>
+                    </p>
+                    <p>país: <strong>Brasil</strong>
+                    </p>
+                    <p>ano: <strong>2007</strong>
+                    </p>
+                    <p>duração: <strong>143 min</strong>
+                    </p>
+                    <p>cor: <strong>Colorido</strong>
+                    </p>
+                    <p>sinopse: <strong>O foco narrador deste filme é um olhar estrangeiro sobre o Pampa. O diretor, dessa forma, faz um paralelo com a literatura produzida pelo escritor gaúcho Luiz Antonio de Assis Brasil, a qual desenvolve esse mesmo olhar. Além do universo literário do autor, apresenta uma reflexão acerca de vários temas que circundam seu universo existencial e estético, como por exemplo, a Oficina de Criação Literária na PUCRS, o Pampa, Porto Alegre, Mozart e sua ascendência açoriana.</strong>
+                    </p>
+                    <button class="modal-button btn custom-btn" onclick="closeModal('modal8')">Fechar</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-6">
+              <div class="artists-thumb">
+                <div class="artists-image-wrap">
+                  <img src="../images/cartazes/na_estrada_com_ze_limeira_a3_page-0001.jpg" class="artists-image img-fluid" onclick="openModal('modal6')">
+                </div>
+              </div>
+              <!-- Modal -->
+              <div id="modal6" class="modal">
+                <span class="modal-close" onclick="closeModal('modal6')">&times;</span>
+                <div class="modal-content">
+                  <div class="modal-image">
+                    <img src="../images/cartazes/na_estrada_com_ze_limeira_a3_page-0001.jpg">
+                    <a class=" watch-button" href="https://youtu.be/Ay1DxjsT6tU" target="_blank">
+                      <span class="bi-youtube watch-button"></span>&nbsp;&nbsp;assistir ao filme </a>
+                  </div>
+                  <div class="modal-details">
+                    <h3>NA ESTRADA COM ZÉ LIMEIRA</h3>
+                    <p>gênero: <strong>Documentário</strong>
+                    </p>
+                    <p>direção | roteiro: <strong>Douglas Machado</strong>
+                    </p>
+                    <p>produção: <strong>Gardênia Cury • Douglas Machado</strong>
+                    </p>
+                    <p>fotografia | som direto | montagem: <strong>Douglas Machado • Eduardo Crispim</strong>
+                    </p>
+                    <p>still | motion: <strong>Eduardo Crispim</strong>
+                    </p>
+                    <p>trilha sonora: <strong>Sérgio Mattos</strong> — música de abertura: <strong>Beto Brito</strong>
+                    </p>
+                    <p>elenco: <strong>Seu Antonio • Seu Inácio • João Furiba • Nenen Patriota • Zé de Cazuza • Nestor Rolim • Aparecida Nogueira • Carlos Newton Júnior • Pedro Amorim • Jessier Quirino</strong>
+                    </p>
+                    <p>ano: <strong>2011</strong>
+                    </p>
+                    <p>duração: <strong>90 min</strong>
+                    </p>
+                    <p>cor: <strong>Colorido</strong>
+                    </p>
+                    <p>sinopse: <strong>Uma equipe de filmagem percorre os Estados da Paraíba e Pernambuco em busca das memórias do poeta e repentista paraibano Zé Limeira [1886-1954]. Nesta viagem pelo Sertão, a procura dessas informações revela a construção do próprio documentário.</strong>
+                    </p>
+                    <button class="modal-button btn custom-btn" onclick="closeModal('modal6')">Fechar</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-6">
+              <div class="artists-thumb">
+                <div class="artists-image-wrap">
+                  <img src="../images/cartazes/Um_Corpo_Subterraneo_A3.jpg" class="artists-image img-fluid" onclick="openModal('modal10')">
+                </div>
+              </div>
+              <!-- Modal -->
+              <div id="modal10" class="modal">
+                <span class="modal-close" onclick="closeModal('modal10')">&times;</span>
+                <div class="modal-content">
+                  <div class="modal-image">
+                    <img src="../images/cartazes/Um_Corpo_Subterraneo_A3.jpg">
+                    <a class=" watch-button" href="https://youtu.be/v8WPbGAZsSA" target="_blank">
+                      <span class="bi-youtube watch-button"></span>&nbsp;&nbsp;assistir ao filme </a>
+                  </div>
+                  <div class="modal-details">
+                    <h3>UM CORPO SUBTERRÂNEO</h3>
+                    <p>gênero: <strong>Documentário</strong>
+                    </p>
+                    <p>direção | roteiro | fotografia | montagem: <strong>Douglas Machado</strong>
+                    </p>
+                    <p>produção: <strong>Gardênia Cury • Douglas Machado</strong>
+                    </p>
+                    <p>produção: <strong>DOCTV II – Nacional • TV Antares</strong>
+                    </p>
+                    <p>trilha sonora: <strong>Sérgio Mattos – variações sobre <i>La Follia</i>
+                      </strong>
+                    </p>
+                    <p>assistência de direção | still: <strong>Cássia Moura</strong>
+                    </p>
+                    <p>elenco: <strong>Leonor • Dideka • Francelina • Teresinha • Elias • Inácia</strong>
+                    </p>
+                    <p>ano: <strong>2006</strong>
+                    </p>
+                    <p>duração: <strong>52 min</strong>
+                    </p>
+                    <p>cor: <strong>Colorido</strong>
+                    </p>
+                    <p>sinopse: <strong>Uma viagem do extremo norte ao extremo sul do Piauí em busca da memória audiovisual do homem piauiense, o seu "corpo" [geografia humana + circunstâncias] e o seu viés "subterrâneo" [espírito + corpo enterrado]. Os cemitérios são os pontos que alinhavam esta trajetória e a certidão de nascimento o fio condutor desta narrativa.</strong>
+                    </p>
+                    <button class="modal-button btn custom-btn" onclick="closeModal('modal10')">Fechar</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-6">
+              <div class="artists-thumb">
+                <div class="artists-image-wrap">
+                  <img src="../images/cartazes/LB5_AdaCeSILVA_A3.jpg" class="artists-image img-fluid" onclick="openModal('modal9')">
+                </div>
+              </div>
+              <!-- Modal -->
+              <div id="modal9" class="modal">
+                <span class="modal-close" onclick="closeModal('modal9')">&times;</span>
+                <div class="modal-content">
+                  <div class="modal-image">
+                    <img src="../images/cartazes/LB5_AdaCeSILVA_A3.jpg">
+                    <a class=" watch-button" href="https://youtube.com/watch?v=uIrDOaR1JOo" target="_blank">
+                      <span class="bi-youtube watch-button"></span>&nbsp;&nbsp;assistir ao filme </a>
+                  </div>
+                  <div class="modal-details">
+                    <h3>ALBERTO DA COSTA E SILVA - O RETORNO DO FILHO</h3>
+                    <p>gênero: <strong>Documentário</strong>
+                    </p>
+                    <p>direção | roteiro | fotografia | montagem: <strong>Douglas Machado</strong>
+                    </p>
+                    <p>produção: <strong>Gardênia Cury • Douglas Machado</strong>
+                    </p>
+                    <p>produção: <strong>DOCTV IV – Piauí • TV Antares</strong>
+                    </p>
+                    <p>direção de produção | still: <strong>Gardênia Cury</strong>
+                    </p>
+                    <p>som direto | trilha sonora original: <strong>Sérgio Mattos</strong>
+                    </p>
+                    <p>elenco: <strong>Alberto da Costa e Silva</strong>
+                    </p>
+                    <p>país: <strong>Brasil</strong>
+                    </p>
+                    <p>ano: <strong>2009</strong>
+                    </p>
+                    <p>duração: <strong>52 min</strong>
+                    </p>
+                    <p>cor: <strong>Colorido</strong>
+                    </p>
+                    <p>sinopse: <strong>Uma viagem de regresso a Amarante, no Piauí, feita pelo poeta e historiador Alberto da Costa e Silva. Amarante é o lugar onde nasceu o seu pai Da Costa e Silva [1885-1950], um dos poetas piauienses mais afinados com a sensibilidade popular. Um documentário sobre continuidade, aquilo que foi do pai, está no filho mas, em certo sentido, o filho recria o pai. Neste sutil jogo, ambos saem engrandecidos, em suas dimensões artísticas e humanas.</strong>
+                    </p>
+                    <button class="modal-button btn custom-btn" onclick="closeModal('modal9')">Fechar</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-6">
+              <div class="artists-thumb">
+                <div class="artists-image-wrap">
+                  <img src="../images/cartazes/LB3_Vilaca_A3.jpg" class="artists-image img-fluid" onclick="openModal('modal7')">
+                </div>
+              </div>
+              <!-- Modal -->
+              <div id="modal7" class="modal">
+                <span class="modal-close" onclick="closeModal('modal7')">&times;</span>
+                <div class="modal-content">
+                  <div class="modal-image">
+                    <img src="../images/cartazes/LB3_Vilaca_A3.jpg">
+                    <a class=" watch-button" href="https://youtube.com/watch?v=63JCjd7IVyk" target="_blank">
+                      <span class="bi-youtube watch-button"></span>&nbsp;&nbsp;assistir ao filme </a>
+                  </div>
+                  <div class="modal-details">
+                    <h3>MARCOS VINICIOS VILAÇA - O ARTESÃO DA PALAVRA</h3>
+                    <p>gênero: <strong>Documentário</strong>
+                    </p>
+                    <p>direção | roteiro | fotografia | montagem: <strong>Douglas Machado</strong>
+                    </p>
+                    <p>produção: <strong>Gardênia Cury • Douglas Machado • Cássia Moura</strong>
+                    </p>
+                    <p>trilha sonora original: <strong>Sérgio Mattos</strong>
+                    </p>
+                    <p>elenco: <strong>Marcos Vinicios Vilaça • Nélida Piñon • Alberto da Costa e Silva • Lêdo Ivo • Roberto Cavalcanti de Albuquerque • Paulo Herkenhoff • José Sarney • Marcus Accioly • Janete Costa</strong>
+                    </p>
+                    <p>país: <strong>Brasil</strong>
+                    </p>
+                    <p>ano: <strong>2005</strong>
+                    </p>
+                    <p>duração: <strong>80 min</strong>
+                    </p>
+                    <p>cor: <strong>Colorido</strong>
+                    </p>
+                    <p>sinopse: <strong>Através de uma viagem de caminhão – de São Miguel das Missões/RS a Olinda/PE – o diretor Douglas Machado traça um diálogo com o escritor Marcos Vinicios Vilaça e seu universo literário. A ação do filme ocorre de maneira paralela, a viagem propriamente dita e os passeios de carro com o escritor, seja no Recife, Rio de Janeiro ou Brasília.</strong>
+                    </p>
+                    <button class="modal-button btn custom-btn" onclick="closeModal('modal7')">Fechar</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-6">
+              <div class="artists-thumb">
+                <div class="artists-image-wrap">
+                  <img src="../images/cartazes/lb6_wmartins_a3_page-0001.jpg" class="artists-image img-fluid" onclick="openModal('modal5')">
+                </div>
+              </div>
+              <!-- Modal -->
+              <div id="modal5" class="modal">
+                <span class="modal-close" onclick="closeModal('modal5')">&times;</span>
+                <div class="modal-content">
+                  <div class="modal-image">
+                    <img src="../images/cartazes/lb6_wmartins_a3_page-0001.jpg">
+                    <a class=" watch-button" href="https://youtube.com/watch?v=H60vWfQ4oek" target="_blank">
+                      <span class="bi-youtube watch-button"></span>&nbsp;&nbsp;assistir ao filme </a>
+                  </div>
+                  <div class="modal-details">
+                    <h3>WILSON MARTINS – A CONSCIÊNCIA DA CRÍTICA</h3>
+                    <p>gênero: <strong>Documentário</strong>
+                    </p>
+                    <p>direção | roteiro | fotografia | montagem: <strong>Douglas Machado</strong>
+                    </p>
+                    <p>produção: <strong>Gardênia Cury • Douglas Machado</strong>
+                    </p>
+                    <p>direção de produção: <strong>Gardênia Cury</strong>
+                    </p>
+                    <p>produtor associado: <strong>Marden Machado</strong>
+                    </p>
+                    <p>montagem: <strong>Douglas Machado • Eduardo Crispim</strong>
+                    </p>
+                    <p>motion | color: <strong>Eduardo Crispim</strong>
+                    </p>
+                    <p>trilha sonora: <strong>Sérgio Mattos</strong>
+                    </p>
+                    <p>still: <strong>Gardênia Cury • Marden Machado</strong>
+                    </p>
+                    <p>elenco: <strong>Wilson Martins • Affonso Romano de Sant’anna • Miguel Sanches Neto • Moacyr Scliar • Luiz Antonio de Assis Brasil • Kenneth Krabbenhoft</strong>
+                    </p>
+                    <p>país: <strong>Brasil</strong>
+                    </p>
+                    <p>ano: <strong>2012</strong>
+                    </p>
+                    <p>duração: <strong>62 min</strong>
+                    </p>
+                    <p>cor: <strong>Colorido</strong>
+                    </p>
+                    <p>sinopse: <strong>O documentário tem como base uma longa entrevista gravada com Wilson Martins, em 2002. Nos anos subseqüentes, novos encontros e novas entrevistas fizeram deste documentário um tecido de memórias gravado em Curitiba, Rio de Janeiro, Porto Alegre e Nova Iorque, nos EUA.</strong>
+                    </p>
+                    <button class="modal-button btn custom-btn" onclick="closeModal('modal5')">Fechar</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- <div class="col-lg-3 col-md-4 col-sm-6"><div class="artists-thumb"><div class="artists-image-wrap"><img src="../images/cartazes/cartaz_folhetos_do_sertao.jpg"
+                                    class="artists-image img-fluid" onclick="openModal('modal11')"></div></div><div id="modal11" class="modal"><span class="modal-close" onclick="closeModal('modal11')">&times;</span><div class="modal-content"><div class="modal-image"><img src="../images/cartazes/cartaz_folhetos_do_sertao.jpg"><a class=" watch-button" href="https://youtu.be/cvCaTUPwGwc" target="_blank"><span class="bi-youtube watch-button"></span>&nbsp;&nbsp;assistir ao filme</a></div><div class="modal-details"><p><h3>FOLHETOS DO SERTÃO [vol.1]: <strong>POESIA NA MADEIRA</H3></strong></p><p>gênero: <strong>DOCUMENTÁRIO</strong></p><p>direção | roteiro | fotografia | montagem: <strong>DOUGLAS MACHADO</strong></p><p>produção: <strong>GARDÊNIA CURY • DOUGLAS MACHADO</strong></p><p>Direção de Produção | Still: <strong>GARDÊNIA CURY</strong></p><p>elenco: <strong>YOLANDA CARVALHO</strong></p><p>ano: <strong>2014</strong></p><p>duração: <strong>20 MIN</strong></p><p>cor: <strong>COLORIDO</strong></p><p>sinopse: <strong>Uma parte significativa da Literatura de Cordel usa a xilographia como arte para as capas de seus folhetos. A capa é o que se vê primeiramente. Por esta razão, escolhemos dar início a esta Série com um artista de xilographia, Yolanda Carvalho. A xilographia que ela produziu durante as gravações será usada como capa de um Folheto no final do projeto.</strong></p><button class="modal-button btn custom-btn" onclick="closeModal('modal11')">Fechar</button></div></div></div></div> -->
+            <div class="col-lg-6 col-12">
+              <div class="artists-thumb">
+                <div class="artists-image-wrap">
+                  <img src="../images/cartazes/cartaz_ensaios_intimos_e_imperfeitos.jpg" class="artists-image img-fluid" onclick="openModal('modal12')">
+                </div>
+              </div>
+              <!-- Modal -->
+              <div id="modal12" class="modal">
+                <span class="modal-close" onclick="closeModal('modal12')">&times;</span>
+                <div class="modal-content">
+                  <div class="modal-image">
+                    <img src="../images/cartazes/cartaz_ensaios_intimos_e_imperfeitos.jpg">
+                    <a class=" watch-button" href="https://youtube.com/watch?v=66AcpoQ3dLM" target="_blank">
+                      <span class="bi-youtube watch-button"></span>&nbsp;&nbsp;Ensaios I: Sobre o Outrora </a>
+                    <br>
+                    <a class=" watch-button" href="https://youtube.com/watch?v=vBtEJRQo5a8" target="_blank">
+                      <span class="bi-youtube watch-button"></span>&nbsp;&nbsp;Ensaios II: Sobre o Tempo </a>
+                    <br>
+                    <a class=" watch-button" href="https://youtube.com/watch?v=xBBP8ia3Duc" target="_blank">
+                      <span class="bi-youtube watch-button"></span>&nbsp;&nbsp;Ensaios III: Sobre o Livro e o Escritor </a>
+                    <br>
+                    <a class=" watch-button" href="https://youtube.com/watch?v=oUE5-Ga7eWE" target="_blank">
+                      <span class="bi-youtube watch-button"></span>&nbsp;&nbsp;Ensaios: Não Saberes II - Da alma </a>
+                    <br>
+                    <a class=" watch-button" href="https://youtube.com/watch?v=qtPMGNOqt1o" target="_blank">
+                      <span class="bi-youtube watch-button"></span>&nbsp;&nbsp;Ensaios: Não Saberes X - Dos desconhecidos </a>
+                    <br>
+                    <a class=" watch-button" href="https://youtube.com/watch?v=eOWRLGAZGGA" target="_blank">
+                      <span class="bi-youtube watch-button"></span>&nbsp;&nbsp;Ensaios: Tempo III - Do que passa </a>
+                    <br>
+                    <a class=" watch-button" href="https://youtube.com/watch?v=XfJyzKc29QY" target="_blank">
+                      <span class="bi-youtube watch-button"></span>&nbsp;&nbsp;Ensaios: Tempo VIII - Das horas do dia </a>
+                    <br>
+                  </div>
+                  <div class="modal-details">
+                    <h3>Ensaios íntimos e imperfeitos [vol.1]</h3>
+                    <p>gênero: <strong>Documentário</strong>
+                    </p>
+                    <p>da obra: <strong>Ensaios íntimos e imperfeitos</strong>
+                    </p>
+                    <p>escritor | voz: <strong>Luiz Antonio de Assis Brasil</strong>
+                    </p>
+                    <p>direção | fotografia | entrevistas: <strong>Douglas Machado</strong>
+                    </p>
+                    <p>produção: <strong>Douglas Machado • Gardênia Cury</strong>
+                    </p>
+                    <p>produção executiva: <strong>João Marcello Claudino</strong>
+                    </p>
+                    <p>edição: <strong>Douglas Machado • Grax Medina • Lucas Machado • Lívio Galeno</strong>
+                    </p>
+                    <p>ano: <strong>2015–2018</strong>
+                    </p>
+                    <p>duração: <strong>7 curtas com média de 10 min cada</strong>
+                    </p>
+                    <p>cor: <strong>Colorido</strong>
+                    </p>
+                    <p>sinopse: <strong>Uma visita ao livro Ensaios íntimos e imperfeitos, de Luiz Antonio de Assis Brasil, com o autor em cena. São filmes de curta duração, em que o romancista externa suas reflexões sobre a vida para o olhar do cineasta Douglas Machado. Um encontro entre a Literatura e o Cinema, através da sensibilidade de dois artistas de nosso tempo.</strong>
+                    </p>
+                    <button class="modal-button btn custom-btn" onclick="closeModal('modal12')">Fechar</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
+      </section>
+    </main>
+    <footer class="site-footer">
+      <div class="site-footer-top">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-6 col-7">
+              <h3 class="text-white mb-lg-0">
+                <img style="width: 65px" src="../images/logo.png" />&nbsp&nbsp trinca/filmes
+              </h3>
+            </div>
+            <div class="col-lg-6 col-5 d-flex justify-content-lg-end align-items-center">
+              <ul class="social-icon d-flex justify-content-lg-end">
+                <li class="social-icon-item">
+                  <a href="https://www.youtube.com/@trincafilmes" class="social-icon-link">
+                    <span class="bi-youtube"></span>
+                  </a>
+                </li>
+                <li class="social-icon-item">
+                  <a href="https://www.instagram.com/trincafilmes/" class="social-icon-link">
+                    <span class="bi-instagram"></span>
+                  </a>
+                </li>
+                <li class="social-icon-item">
+                  <a href="https://www.facebook.com/profile.php?id=712642976" class="social-icon-link">
+                    <span class="bi-facebook"></span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-5 col-12 mb-4 pb-2">
+            <h5 class="site-footer-title mb-3">menu</h5>
+            <ul class="site-footer-links">
+              <li class="site-footer-link-item">
+                <a href="/" class="site-footer-link">home</a>
+              </li>
+              <li class="site-footer-link-item">
+                <a href="/filmes" class="site-footer-link">filmes</a>
+              </li>
+              <li class="site-footer-link-item">
+                <a href="/fotografias" class="site-footer-link">fotografias</a>
+              </li>
+              <li class="site-footer-link-item">
+                <a href="/sobre" class="site-footer-link">sobre</a>
+              </li>
+            </ul>
+          </div>
+          <div class="col-lg-4 col-md-6 col-12 mb-4 mb-lg-0">
+            <h5 class="site-footer-title mb-3">contato</h5>
+            <p class="text-white d-flex mb-1">
+              <a href="tel: 086-9987-5896" class="site-footer-link"> +55 86 99987-5896 </a>
+            </p>
+            <p class="text-white d-flex">
+              <a href="mailto:trincafilmes@trincafilmes.com.br" class="site-footer-link"> trincafilmes@trincafilmes.com.br </a>
+            </p>
+          </div>
+          <div class="col-lg-3 col-md-6 col-11 mb-4 mb-lg-0 mb-md-0">
+            <h5 class="site-footer-title mb-3">endereço</h5>
+            <p class="text-white d-flex mt-3 mb-2"> Rua João Cabral, 719 / 202 <br> Centro/Norte <br> Teresina - Piauí - Brasil <br> CEP: 64000-030 </p>
+            <!-- <a class="link-fx-1 color-contrast-higher mt-3" href="#"><span>Our Maps</span><svg class="icon" viewBox="0 0 32 32" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><circle cx="16" cy="16" r="15.5"></circle><line x1="10" y1="18" x2="16" y2="12"></line><line x1="16" y1="12" x2="22" y2="18"></line></g></svg></a> -->
+          </div>
+        </div>
+      </div>
+      <div class="site-footer-bottom">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-12 col-12 mt-5">
+              <p class="copyright-text">©2025TRINCAFILMES</p>
+              <small style="color: rgb(187, 186, 186);">desenvolvido por <a class="site-footer-link" target="_blank" href="https://lucasmac.com">olucasmac</a>
+              </small>
+            </div>
+            <!-- <div class="col-lg-8 col-12 mt-lg-5"><ul class="site-footer-links"><li class="site-footer-link-item"><a href="#" class="site-footer-link">Terms &amp; Conditions</a></li><li class="site-footer-link-item"><a href="#" class="site-footer-link">Privacy Policy</a></li><li class="site-footer-link-item"><a href="#" class="site-footer-link">Your Feedback</a></li></ul></div> -->
+          </div>
+        </div>
+      </div>
     </footer>
-
     <!-- JAVASCRIPT FILES -->
     <script src="../js/jquery.min.js"></script>
     <script src="../js/bootstrap.min.js"></script>
@@ -761,25 +832,22 @@
     <!-- <script src="../js/click-scroll.js"></script> -->
     <script src="../js/custom.js"></script>
     <script>
-        function openModal(modalId) {
-            document.getElementById(modalId).style.display = "block";
-        }
+      function openModal(modalId) {
+        document.getElementById(modalId).style.display = "block";
+      }
 
-        function closeModal(modalId) {
-            document.getElementById(modalId).style.display = "none";
+      function closeModal(modalId) {
+        document.getElementById(modalId).style.display = "none";
+      }
+      // Close the modal when the user clicks anywhere outside of the modal content
+      window.onclick = function(event) {
+        var modals = document.getElementsByClassName('modal');
+        for (var i = 0; i < modals.length; i++) {
+          if (event.target == modals[i]) {
+            modals[i].style.display = "none";
+          }
         }
-
-        // Close the modal when the user clicks anywhere outside of the modal content
-        window.onclick = function(event) {
-            var modals = document.getElementsByClassName('modal');
-            for (var i = 0; i < modals.length; i++) {
-                if (event.target == modals[i]) {
-                    modals[i].style.display = "none";
-                }
-            }
-        }
+      }
     </script>
-
-</body>
-
+  </body>
 </html>
