@@ -81,6 +81,18 @@
     .link-icon {
       color: #007bff;
     }
+
+    .links-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+      gap: 10px;
+    }
+
+    @media (max-width: 768px) {
+      .links-container {
+        grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+      }
+    }
   </style>
   <body>
     <main>
@@ -128,7 +140,7 @@
               <div class="imprensa-item">
                 <h4>A carta de Esperança</h4>
                 <p>Matéria publicada na Quinta Capa sobre o filme A carta de Esperança Garcia.</p>
-                <div style="display: flex; flex-direction: column; gap: 10px;">
+                <div class="links-container">
                   <a href="https://quintacapa.com.br/a-carta-de-esperanca-garcia-exibicao-do-filme-emociona/" target="_blank" class="link-icon">
                     <i class="bi-link-45deg"></i> Ler matéria online
                   </a>
@@ -142,7 +154,7 @@
               <div class="imprensa-item">
                 <h4>Reflexões a partir de A Carta de Esperança Garcia</h4>
                 <p>Artigo publicado no Geleia Total sobre o documentário A carta de Esperança Garcia, por Noé Filho.</p>
-                <div style="display: flex; flex-direction: column; gap: 10px;">
+                <div class="links-container">
                   <a href="https://www.geleiatotal.com.br/2023/11/27/reflexoes-sobre-a-partir-de-a-carta-de-esperanca-garcia-por-noe-filho/" target="_blank" class="link-icon">
                     <i class="bi-link-45deg"></i> Ler matéria online
                   </a>
@@ -156,7 +168,7 @@
               <div class="imprensa-item">
                 <h4>Os Sonhos, A Morte e o Sertão de Cipriano</h4>
                 <p>Matéria publicada no Geleia Total sobre o filme Cipriano e a Morte de Cipriano, por Victor Martins.</p>
-                <div style="display: flex; flex-direction: column; gap: 10px;">
+                <div class="links-container">
                   <a href="https://www.geleiatotal.com.br/2019/05/03/os-sonhos-a-morte-e-o-sertao-de-cipriano-por-victor-martins/" target="_blank" class="link-icon">
                     <i class="bi-link-45deg"></i> Ler matéria online
                   </a>
@@ -170,11 +182,11 @@
               <div class="imprensa-item">
                 <h4>Douglas Machado e seu talento para a irrelevância</h4>
                 <p>Artigo publicado no Geleia Total sobre Douglas Machado e sua obra, por Noé Filho.</p>
-                <div style="display: flex; flex-direction: column; gap: 10px;">
+                <div class="links-container">
                   <a href="https://www.geleiatotal.com.br/2023/11/23/douglas-machado-e-seu-talento-para-a-irrelevancia-por-noe-filho/" target="_blank" class="link-icon">
                     <i class="bi-link-45deg"></i> Ler matéria online
                   </a>
-                  <a href="../docs/imprensa/geleiatotal-br-2023-11-23-douglas-machado-e-seu-talento-para-a-irrelevancia-por-noe-filho.pdf" target="_blank" class="pdf-icon">
+                  <a href="../docs/imprensa/geleiatotal-br-2023-11-27-reflexoes-sobre-a-partir-de-a-carta-de-esperanca-garcia-por-noe-filho.pdf" target="_blank" class="pdf-icon">
                     <i class="bi-file-pdf"></i> Baixar PDF
                   </a>
                 </div>
@@ -184,7 +196,7 @@
               <div class="imprensa-item">
                 <h4>Zezé Motta interpreta a obra de Caetano Veloso no show Coração Vagabundo</h4>
                 <p>Matéria publicada no Estado de Minas sobre Zezé Motta, que participa do filme A carta de Esperança Garcia.</p>
-                <div style="display: flex; flex-direction: column; gap: 10px;">
+                <div class="links-container">
                   <a href="https://www.em.com.br/app/noticia/cultura/2022/07/12/interna_cultura,1379475/zeze-motta-interpreta-a-obra-de-caetano-veloso-no-show-coracao-vagabundo.shtml" target="_blank" class="link-icon">
                     <i class="bi-link-45deg"></i> Ler matéria online
                   </a>
@@ -192,6 +204,552 @@
                     <i class="bi-file-pdf"></i> Baixar PDF
                   </a>
                 </div>
+              </div>
+            </div>
+            <!-- G1 -->
+            <div class="col-lg-6 col-md-6 col-12">
+              <div class="imprensa-item">
+                <h4>Douglas e Zezé - Esperança Garcia</h4>
+                <p>Matéria publicada no G1 sobre o filme A carta de Esperança Garcia.</p>
+                <a href="../docs/imprensa/g1_douglas-zeze-esperancagarcia.pdf" target="_blank" class="pdf-icon">
+                  <i class="bi-file-pdf"></i> Baixar PDF
+                </a>
+              </div>
+            </div>
+            <!-- Vogue -->
+            <div class="col-lg-6 col-md-6 col-12">
+              <div class="imprensa-item">
+                <h4>80 anos Zezé Motta: "Eu não paro!"</h4>
+                <p>Matéria publicada na Vogue sobre Zezé Motta.</p>
+                <a href="../docs/imprensa/80-anos-Zezé_Motta__Eu_não_paro!__Cultura-Vogue.pdf" target="_blank" class="pdf-icon">
+                  <i class="bi-file-pdf"></i> Baixar PDF
+                </a>
+              </div>
+            </div>
+            <!-- 3 Inútil-paisagem -->
+            <div class="col-lg-6 col-md-6 col-12">
+              <div class="imprensa-item">
+                <h4>Inútil-paisagem (sobre Cipriano e a Morte de Cipriano)</h4>
+                <p>Texto crítico sobre o filme Cipriano e a Morte de Cipriano.</p>
+                <a href="../docs/imprensa/3_Inútil-paisagem_(sobre-Cipriano-e-a-Morte-de-Cipriano).pdf" target="_blank" class="pdf-icon">
+                  <i class="bi-file-pdf"></i> Baixar PDF
+                </a>
+              </div>
+            </div>
+            <!-- Entrevista Revestres -->
+            <div class="col-lg-6 col-md-6 col-12">
+              <div class="imprensa-item">
+                <h4>Entrevista Douglas Machado</h4>
+                <p>Entrevista publicada na Revestres.</p>
+                <a href="../docs/imprensa/Entrevista_Douglas_Machado_(Revestres).pdf" target="_blank" class="pdf-icon">
+                  <i class="bi-file-pdf"></i> Baixar PDF
+                </a>
+              </div>
+            </div>
+            <!-- Texto crítico Marcelo Miranda -->
+            <div class="col-lg-6 col-md-6 col-12">
+              <div class="imprensa-item">
+                <h4>Cipriano - Texto crítico</h4>
+                <p>Texto crítico sobre o filme Cipriano e a Morte de Cipriano, por Marcelo Miranda.</p>
+                <a href="../docs/imprensa/texto-crítico_CIPRIANO_(Marcelo-Miranda).pdf" target="_blank" class="pdf-icon">
+                  <i class="bi-file-pdf"></i> Baixar PDF
+                </a>
+              </div>
+            </div>
+            <!-- Matérias ABL -->
+            <div class="col-lg-6 col-md-6 col-12">
+              <div class="imprensa-item">
+                <h4>Esperança na ABL</h4>
+                <p>Matérias sobre Esperança Garcia na Academia Brasileira de Letras.</p>
+                <div class="links-container">
+                  <a href="../docs/imprensa/materia_ABL_Esperança-na-ABL.pdf" target="_blank" class="pdf-icon">
+                    <i class="bi-file-pdf"></i> Matéria ABL - PDF
+                  </a>
+                  <a href="../docs/imprensa/materia_Lupa1_Esperança-na-ABL.pdf" target="_blank" class="pdf-icon">
+                    <i class="bi-file-pdf"></i> Matéria Lupa - PDF
+                  </a>
+                </div>
+              </div>
+            </div>
+            <!-- Jornal Diário do Povo -->
+            <div class="col-lg-6 col-md-6 col-12">
+              <div class="imprensa-item">
+                <h4>Jornal Diário do Povo</h4>
+                <p>Matérias publicadas no Jornal Diário do Povo.</p>
+                <div class="links-container">
+                  <a href="../docs/imprensa/jornal_Diario_do_Povo_01.jpg" target="_blank" class="pdf-icon">
+                    <i class="bi-file-pdf"></i> Página 01
+                  </a>
+                  <a href="../docs/imprensa/jornal_Diario_do_Povo_02.jpg" target="_blank" class="pdf-icon">
+                    <i class="bi-file-pdf"></i> Página 02
+                  </a>
+                  <a href="../docs/imprensa/jornal_Diario_do_Povo-Galeria_01.jpg" target="_blank" class="pdf-icon">
+                    <i class="bi-file-pdf"></i> Galeria 01
+                  </a>
+                  <a href="../docs/imprensa/jornal_Diario_do_Povo-Galeria_02.jpg" target="_blank" class="pdf-icon">
+                    <i class="bi-file-pdf"></i> Galeria 02
+                  </a>
+                  <a href="../docs/imprensa/jornal_Diario_do_Povo-Galeria_03.jpg" target="_blank" class="pdf-icon">
+                    <i class="bi-file-pdf"></i> Galeria 03
+                  </a>
+                  <a href="../docs/imprensa/jornal_Diario_do_Povo-Galeria_04.jpg" target="_blank" class="pdf-icon">
+                    <i class="bi-file-pdf"></i> Galeria 04
+                  </a>
+                  <a href="../docs/imprensa/jornal_Diario_do_Povo-Galeria_05.jpg" target="_blank" class="pdf-icon">
+                    <i class="bi-file-pdf"></i> Galeria 05
+                  </a>
+                  <a href="../docs/imprensa/jornal_Diario_do_Povo-Galeria_06.jpg" target="_blank" class="pdf-icon">
+                    <i class="bi-file-pdf"></i> Galeria 06
+                  </a>
+                  <a href="../docs/imprensa/jornal_Diario_do_Povo-Galeria_07.jpg" target="_blank" class="pdf-icon">
+                    <i class="bi-file-pdf"></i> Galeria 07
+                  </a>
+                  <a href="../docs/imprensa/jornal_Diario_do_Povo-Galeria_08.jpg" target="_blank" class="pdf-icon">
+                    <i class="bi-file-pdf"></i> Galeria 08
+                  </a>
+                  <a href="../docs/imprensa/jornal_Diario_do_Povo-Galeria_09.jpg" target="_blank" class="pdf-icon">
+                    <i class="bi-file-pdf"></i> Galeria 09
+                  </a>
+                </div>
+              </div>
+            </div>
+            <!-- Jornal O Dia - Torquato -->
+            <div class="col-lg-6 col-md-6 col-12">
+              <div class="imprensa-item">
+                <h4>Jornal O Dia - Torquato</h4>
+                <p>Matérias publicadas no Jornal O Dia sobre Torquato.</p>
+                <div class="links-container">
+                  <a href="../docs/imprensa/jornal_O_Dia-Torquato_01.jpg" target="_blank" class="pdf-icon">
+                    <i class="bi-file-pdf"></i> Página 01
+                  </a>
+                  <a href="../docs/imprensa/jornal_O_Dia-Torquato_02.jpg" target="_blank" class="pdf-icon">
+                    <i class="bi-file-pdf"></i> Página 02
+                  </a>
+                  <a href="../docs/imprensa/jornal_O_Dia-Torquato_03.jpg" target="_blank" class="pdf-icon">
+                    <i class="bi-file-pdf"></i> Página 03
+                  </a>
+                  <a href="../docs/imprensa/jornal_O_Dia-Torquato_04.jpg" target="_blank" class="pdf-icon">
+                    <i class="bi-file-pdf"></i> Página 04
+                  </a>
+                  <a href="../docs/imprensa/jornal_O_Dia-Torquato_05.jpg" target="_blank" class="pdf-icon">
+                    <i class="bi-file-pdf"></i> Página 05
+                  </a>
+                  <a href="../docs/imprensa/jornal_O_Dia-Torquato_06.jpg" target="_blank" class="pdf-icon">
+                    <i class="bi-file-pdf"></i> Página 06
+                  </a>
+                  <a href="../docs/imprensa/jornal_O_Dia-Torquato_07.jpg" target="_blank" class="pdf-icon">
+                    <i class="bi-file-pdf"></i> Página 07
+                  </a>
+                  <a href="../docs/imprensa/jornal_O_Dia-Torquato_08.jpg" target="_blank" class="pdf-icon">
+                    <i class="bi-file-pdf"></i> Página 08
+                  </a>
+                  <a href="../docs/imprensa/jornal_O_Dia-Torquato_09.jpg" target="_blank" class="pdf-icon">
+                    <i class="bi-file-pdf"></i> Página 09
+                  </a>
+                  <a href="../docs/imprensa/jornal_O_Dia-Torquato_10.jpg" target="_blank" class="pdf-icon">
+                    <i class="bi-file-pdf"></i> Página 10
+                  </a>
+                  <a href="../docs/imprensa/jornal_O_Dia-Torquato_11.jpg" target="_blank" class="pdf-icon">
+                    <i class="bi-file-pdf"></i> Página 11
+                  </a>
+                </div>
+              </div>
+            </div>
+            <!-- Jornal MN alternativo -->
+            <div class="col-lg-6 col-md-6 col-12">
+              <div class="imprensa-item">
+                <h4>Jornal MN Alternativo</h4>
+                <p>Matérias publicadas no Jornal MN Alternativo.</p>
+                <div class="links-container">
+                  <a href="../docs/imprensa/jornal_MN_alternativo_01.jpg" target="_blank" class="pdf-icon">
+                    <i class="bi-file-pdf"></i> Página 01
+                  </a>
+                  <a href="../docs/imprensa/jornal_MN_alternativo_02.jpg" target="_blank" class="pdf-icon">
+                    <i class="bi-file-pdf"></i> Página 02
+                  </a>
+                  <a href="../docs/imprensa/jornal_MN_alternativo_03.jpg" target="_blank" class="pdf-icon">
+                    <i class="bi-file-pdf"></i> Página 03
+                  </a>
+                  <a href="../docs/imprensa/jornal_MN_alternativo_04.jpg" target="_blank" class="pdf-icon">
+                    <i class="bi-file-pdf"></i> Página 04
+                  </a>
+                  <a href="../docs/imprensa/jornal_MN_alternativo_05.jpg" target="_blank" class="pdf-icon">
+                    <i class="bi-file-pdf"></i> Página 05
+                  </a>
+                  <a href="../docs/imprensa/jornal_MN_alternativo_06.jpg" target="_blank" class="pdf-icon">
+                    <i class="bi-file-pdf"></i> Página 06
+                  </a>
+                  <a href="../docs/imprensa/jornal_MN_alternativo_07.jpg" target="_blank" class="pdf-icon">
+                    <i class="bi-file-pdf"></i> Página 07
+                  </a>
+                  <a href="../docs/imprensa/jornal_MN_alternativo_08.jpg" target="_blank" class="pdf-icon">
+                    <i class="bi-file-pdf"></i> Página 08
+                  </a>
+                  <a href="../docs/imprensa/jornal_MN_alternativo_09.jpg" target="_blank" class="pdf-icon">
+                    <i class="bi-file-pdf"></i> Página 09
+                  </a>
+                  <a href="../docs/imprensa/jornal_MN_alternativo_10.jpg" target="_blank" class="pdf-icon">
+                    <i class="bi-file-pdf"></i> Página 10
+                  </a>
+                  <a href="../docs/imprensa/jornal_MN_alternativo_11.jpg" target="_blank" class="pdf-icon">
+                    <i class="bi-file-pdf"></i> Página 11
+                  </a>
+                  <a href="../docs/imprensa/jornal_MN_alternativo_12.jpg" target="_blank" class="pdf-icon">
+                    <i class="bi-file-pdf"></i> Página 12
+                  </a>
+                  <a href="../docs/imprensa/jornal_MN_alternativo_13.jpg" target="_blank" class="pdf-icon">
+                    <i class="bi-file-pdf"></i> Página 13
+                  </a>
+                  <a href="../docs/imprensa/jornal_MN_alternativo_14.jpg" target="_blank" class="pdf-icon">
+                    <i class="bi-file-pdf"></i> Página 14
+                  </a>
+                </div>
+              </div>
+            </div>
+            <!-- Jornal MN artefest -->
+            <div class="col-lg-6 col-md-6 col-12">
+              <div class="imprensa-item">
+                <h4>Jornal MN Artefest</h4>
+                <p>Matérias publicadas no Jornal MN Artefest.</p>
+                <div class="links-container">
+                  <a href="../docs/imprensa/jornal_MN_artefest_01.jpg" target="_blank" class="pdf-icon">
+                    <i class="bi-file-pdf"></i> Página 01
+                  </a>
+                  <a href="../docs/imprensa/jornal_MN_artefest_02.jpg" target="_blank" class="pdf-icon">
+                    <i class="bi-file-pdf"></i> Página 02
+                  </a>
+                  <a href="../docs/imprensa/jornal_MN_artefest_03.jpg" target="_blank" class="pdf-icon">
+                    <i class="bi-file-pdf"></i> Página 03
+                  </a>
+                  <a href="../docs/imprensa/jornal_MN_artefest_04.jpg" target="_blank" class="pdf-icon">
+                    <i class="bi-file-pdf"></i> Página 04
+                  </a>
+                  <a href="../docs/imprensa/jornal_MN_artefest_05.jpg" target="_blank" class="pdf-icon">
+                    <i class="bi-file-pdf"></i> Página 05
+                  </a>
+                  <a href="../docs/imprensa/jornal_MN_artefest_06.jpg" target="_blank" class="pdf-icon">
+                    <i class="bi-file-pdf"></i> Página 06
+                  </a>
+                  <a href="../docs/imprensa/jornal_MN_artefest_07.jpg" target="_blank" class="pdf-icon">
+                    <i class="bi-file-pdf"></i> Página 07
+                  </a>
+                  <a href="../docs/imprensa/jornal_MN_artefest_08.jpg" target="_blank" class="pdf-icon">
+                    <i class="bi-file-pdf"></i> Página 08
+                  </a>
+                  <a href="../docs/imprensa/jornal_MN_artefest_09.jpg" target="_blank" class="pdf-icon">
+                    <i class="bi-file-pdf"></i> Página 09
+                  </a>
+                </div>
+              </div>
+            </div>
+            <!-- Jornal MN vida -->
+            <div class="col-lg-6 col-md-6 col-12">
+              <div class="imprensa-item">
+                <h4>Jornal MN Vida</h4>
+                <p>Matérias publicadas no Jornal MN Vida.</p>
+                <div class="links-container">
+                  <a href="../docs/imprensa/jornal_MN_vida_01.jpg" target="_blank" class="pdf-icon">
+                    <i class="bi-file-pdf"></i> Página 01
+                  </a>
+                  <a href="../docs/imprensa/jornal_MN_vida_02.jpg" target="_blank" class="pdf-icon">
+                    <i class="bi-file-pdf"></i> Página 02
+                  </a>
+                </div>
+              </div>
+            </div>
+            <!-- Jornal Estadao -->
+            <div class="col-lg-6 col-md-6 col-12">
+              <div class="imprensa-item">
+                <h4>Jornal Estadão</h4>
+                <p>Matérias publicadas no Jornal Estadão.</p>
+                <div class="links-container">
+                  <a href="../docs/imprensa/jornal_Estadao_1.jpg" target="_blank" class="pdf-icon">
+                    <i class="bi-file-pdf"></i> Página 01
+                  </a>
+                  <a href="../docs/imprensa/jornal_Estadao_2.pdf" target="_blank" class="pdf-icon">
+                    <i class="bi-file-pdf"></i> Página 02
+                  </a>
+                </div>
+              </div>
+            </div>
+            <!-- Jornal Gazeta do Sul -->
+            <div class="col-lg-6 col-md-6 col-12">
+              <div class="imprensa-item">
+                <h4>Jornal Gazeta do Sul - Santa Cruz do Sul</h4>
+                <p>Matérias publicadas no Jornal Gazeta do Sul de Santa Cruz do Sul.</p>
+                <div class="links-container">
+                  <a href="../docs/imprensa/jornal_Gazeta_do_Sul-Santa_Cruz_do_Sul_1.pdf" target="_blank" class="pdf-icon">
+                    <i class="bi-file-pdf"></i> Página 01
+                  </a>
+                  <a href="../docs/imprensa/jornal_Gazeta_do_Sul-Santa_Cruz_do_Sul_2.pdf" target="_blank" class="pdf-icon">
+                    <i class="bi-file-pdf"></i> Página 02
+                  </a>
+                  <a href="../docs/imprensa/jornal_Gazeta_do_Sul-Santa_Cruz_do_Sul_3.pdf" target="_blank" class="pdf-icon">
+                    <i class="bi-file-pdf"></i> Página 03
+                  </a>
+                </div>
+              </div>
+            </div>
+            <!-- Jornal A União -->
+            <div class="col-lg-6 col-md-6 col-12">
+              <div class="imprensa-item">
+                <h4>Jornal A União - Correio das Artes (João Pessoa-PB)</h4>
+                <p>Matérias publicadas no Jornal A União - Correio das Artes de João Pessoa.</p>
+                <div class="links-container">
+                  <a href="../docs/imprensa/jornal_A_Uniao-Correio_das_Artes_(Joao_Pessoa-PB)_1.jpg" target="_blank" class="pdf-icon">
+                    <i class="bi-file-pdf"></i> Página 01
+                  </a>
+                  <a href="../docs/imprensa/jornal_A_Uniao-Correio_das_Artes_(Joao_Pessoa-PB)_2.jpg" target="_blank" class="pdf-icon">
+                    <i class="bi-file-pdf"></i> Página 02
+                  </a>
+                </div>
+              </div>
+            </div>
+            <!-- Jornal Euro-Brasil Press -->
+            <div class="col-lg-6 col-md-6 col-12">
+              <div class="imprensa-item">
+                <h4>Jornal Euro-Brasil Press</h4>
+                <p>Matérias publicadas no Jornal Euro-Brasil Press.</p>
+                <div class="links-container">
+                  <a href="../docs/imprensa/jornal_Euro-Brasil_Press_1.jpg" target="_blank" class="pdf-icon">
+                    <i class="bi-file-pdf"></i> Página 01
+                  </a>
+                  <a href="../docs/imprensa/jornal_Euro-Brasil_Press_2.jpg" target="_blank" class="pdf-icon">
+                    <i class="bi-file-pdf"></i> Página 02
+                  </a>
+                </div>
+              </div>
+            </div>
+            <!-- Jornal Goteborg Posten -->
+            <div class="col-lg-6 col-md-6 col-12">
+              <div class="imprensa-item">
+                <h4>Jornal Göteborgs-Posten (Suécia)</h4>
+                <p>Matérias publicadas no Jornal Göteborgs-Posten da Suécia.</p>
+                <div class="links-container">
+                  <a href="../docs/imprensa/jornal_Goteborg_Posten_(Suecia)_1.jpg" target="_blank" class="pdf-icon">
+                    <i class="bi-file-pdf"></i> Página 01
+                  </a>
+                  <a href="../docs/imprensa/jornal_Goteborg_Posten_(Suecia)_2.jpg" target="_blank" class="pdf-icon">
+                    <i class="bi-file-pdf"></i> Página 02
+                  </a>
+                </div>
+              </div>
+            </div>
+            <!-- Estreia Cipriano nos Cinemas Teresina -->
+            <div class="col-lg-6 col-md-6 col-12">
+              <div class="imprensa-item">
+                <h4>Estreia Cipriano nos Cinemas Teresina</h4>
+                <p>Matérias sobre a estreia do filme Cipriano e a Morte de Cipriano nos Cinemas Teresina (31 de março de 2001).</p>
+                <div class="links-container">
+                  <a href="../docs/imprensa/Estreia_Cipriano_nos_Cinemas_Teresina_1_(31março2001).jpg" target="_blank" class="pdf-icon">
+                    <i class="bi-file-pdf"></i> Página 01
+                  </a>
+                  <a href="../docs/imprensa/Estreia_Cipriano_nos_Cinemas_Teresina_2_(31março2001).jpg" target="_blank" class="pdf-icon">
+                    <i class="bi-file-pdf"></i> Página 02
+                  </a>
+                  <a href="../docs/imprensa/Estreia_Cipriano_nos_Cinemas_Teresina_3_(31março2001).jpg" target="_blank" class="pdf-icon">
+                    <i class="bi-file-pdf"></i> Página 03
+                  </a>
+                </div>
+              </div>
+            </div>
+            <!-- Cine Santander -->
+            <div class="col-lg-6 col-md-6 col-12">
+              <div class="imprensa-item">
+                <h4>Cine Santander</h4>
+                <p>Matérias publicadas no Cine Santander sobre os filmes da Trinca Filmes.</p>
+                <div class="links-container">
+                  <a href="../docs/imprensa/Cine_Santander_(A_Consciencia_da_Critica).jpg" target="_blank" class="pdf-icon">
+                    <i class="bi-file-pdf"></i> A Consciência da Crítica
+                  </a>
+                  <a href="../docs/imprensa/Cine_Santander_(Cipriano).jpg" target="_blank" class="pdf-icon">
+                    <i class="bi-file-pdf"></i> Cipriano
+                  </a>
+                  <a href="../docs/imprensa/Cine_Santander_(O_Codice_e_o_Cinzel).jpg" target="_blank" class="pdf-icon">
+                    <i class="bi-file-pdf"></i> O Códice e o Cinzel
+                  </a>
+                  <a href="../docs/imprensa/Cine_Santander_(O_Retorno_do_Filho).jpg" target="_blank" class="pdf-icon">
+                    <i class="bi-file-pdf"></i> O Retorno do Filho
+                  </a>
+                </div>
+              </div>
+            </div>
+            <!-- Matérias individuais -->
+            <div class="col-lg-6 col-md-6 col-12">
+              <div class="imprensa-item">
+                <h4>Jornal de Brasília</h4>
+                <p>Matéria publicada no Jornal de Brasília.</p>
+                <a href="../docs/imprensa/jornal_de_Brasilia.jpg" target="_blank" class="pdf-icon">
+                  <i class="bi-file-pdf"></i> Baixar PDF
+                </a>
+              </div>
+            </div>
+            <div class="col-lg-6 col-md-6 col-12">
+              <div class="imprensa-item">
+                <h4>Jornal Correio da Paraíba</h4>
+                <p>Matéria publicada no Jornal Correio da Paraíba.</p>
+                <a href="../docs/imprensa/jornal_Correio_da_Paraiba.jpg" target="_blank" class="pdf-icon">
+                  <i class="bi-file-pdf"></i> Baixar PDF
+                </a>
+              </div>
+            </div>
+            <div class="col-lg-6 col-md-6 col-12">
+              <div class="imprensa-item">
+                <h4>Jornal Diário do Nordeste (Fortaleza-CE)</h4>
+                <p>Matéria publicada no Jornal Diário do Nordeste de Fortaleza.</p>
+                <a href="../docs/imprensa/jornal_Diario_do_Nordeste_(Fortaleza-CE).jpg" target="_blank" class="pdf-icon">
+                  <i class="bi-file-pdf"></i> Baixar PDF
+                </a>
+              </div>
+            </div>
+            <div class="col-lg-6 col-md-6 col-12">
+              <div class="imprensa-item">
+                <h4>Jornal Folha de São Paulo</h4>
+                <p>Matéria publicada no Jornal Folha de São Paulo.</p>
+                <a href="../docs/imprensa/jornal_Folha_de_SP.jpg" target="_blank" class="pdf-icon">
+                  <i class="bi-file-pdf"></i> Baixar PDF
+                </a>
+              </div>
+            </div>
+            <div class="col-lg-6 col-md-6 col-12">
+              <div class="imprensa-item">
+                <h4>Jornal Gazeta do Povo (Curitiba-PR)</h4>
+                <p>Matéria publicada no Jornal Gazeta do Povo de Curitiba.</p>
+                <a href="../docs/imprensa/jornal_Gazeta_do_Povo_(Curitiba-PR).jpg" target="_blank" class="pdf-icon">
+                  <i class="bi-file-pdf"></i> Baixar PDF
+                </a>
+              </div>
+            </div>
+            <div class="col-lg-6 col-md-6 col-12">
+              <div class="imprensa-item">
+                <h4>Jornal O Nacional (Passo Fundo-RS)</h4>
+                <p>Matéria publicada no Jornal O Nacional de Passo Fundo.</p>
+                <a href="../docs/imprensa/jornal_O_Nacional_(Passo_Fundo-RS).jpg" target="_blank" class="pdf-icon">
+                  <i class="bi-file-pdf"></i> Baixar PDF
+                </a>
+              </div>
+            </div>
+            <div class="col-lg-6 col-md-6 col-12">
+              <div class="imprensa-item">
+                <h4>Jornal O Povo (Fortaleza-CE)</h4>
+                <p>Matéria publicada no Jornal O Povo de Fortaleza.</p>
+                <a href="../docs/imprensa/jornal_O_Povo_(Fortaleza-CE).jpg" target="_blank" class="pdf-icon">
+                  <i class="bi-file-pdf"></i> Baixar PDF
+                </a>
+              </div>
+            </div>
+            <div class="col-lg-6 col-md-6 col-12">
+              <div class="imprensa-item">
+                <h4>Jornal O Bembem (Parnaíba-PI)</h4>
+                <p>Matéria publicada no Jornal O Bembem de Parnaíba.</p>
+                <a href="../docs/imprensa/jornal_O_Bembem_(Parnaiba-PI).jpg" target="_blank" class="pdf-icon">
+                  <i class="bi-file-pdf"></i> Baixar PDF
+                </a>
+              </div>
+            </div>
+            <div class="col-lg-6 col-md-6 col-12">
+              <div class="imprensa-item">
+                <h4>Jornal Tribuna do Norte (Natal-RN)</h4>
+                <p>Matéria publicada no Jornal Tribuna do Norte de Natal.</p>
+                <a href="../docs/imprensa/jornal_Tribuna_do_Norte_(Natal-RN).jpg" target="_blank" class="pdf-icon">
+                  <i class="bi-file-pdf"></i> Baixar PDF
+                </a>
+              </div>
+            </div>
+            <div class="col-lg-6 col-md-6 col-12">
+              <div class="imprensa-item">
+                <h4>Matéria Overmundo</h4>
+                <p>Matérias publicadas no Overmundo.</p>
+                <div class="links-container">
+                  <a href="../docs/imprensa/materia_Overmundo_1.jpg" target="_blank" class="pdf-icon">
+                    <i class="bi-file-pdf"></i> Página 01
+                  </a>
+                  <a href="../docs/imprensa/materia_Overmundo_2.jpg" target="_blank" class="pdf-icon">
+                    <i class="bi-file-pdf"></i> Página 02
+                  </a>
+                </div>
+              </div>
+            </div>
+            <!-- Outras matérias individuais -->
+            <div class="col-lg-6 col-md-6 col-12">
+              <div class="imprensa-item">
+                <h4>Artes de Marco - Festival de Cinema</h4>
+                <p>Matéria sobre o Festival de Cinema.</p>
+                <a href="../docs/imprensa/Artes_de_Marco_(Festival_de_Cinema).jpg" target="_blank" class="pdf-icon">
+                  <i class="bi-file-pdf"></i> Baixar PDF
+                </a>
+              </div>
+            </div>
+            <div class="col-lg-6 col-md-6 col-12">
+              <div class="imprensa-item">
+                <h4>Cine TMJP2 - O Códice e o Cinzel</h4>
+                <p>Matéria publicada no Cine TMJP2.</p>
+                <a href="../docs/imprensa/Cine_TMJP2_(O_Codice_e_o_Cinzel).jpg" target="_blank" class="pdf-icon">
+                  <i class="bi-file-pdf"></i> Baixar PDF
+                </a>
+              </div>
+            </div>
+            <div class="col-lg-6 col-md-6 col-12">
+              <div class="imprensa-item">
+                <h4>Interartes Serra da Capivara - Cipriano</h4>
+                <p>Matéria sobre o filme Cipriano publicada no Interartes Serra da Capivara.</p>
+                <a href="../docs/imprensa/Interartes_Serra_da_Capivara_(Cipriano).jpg" target="_blank" class="pdf-icon">
+                  <i class="bi-file-pdf"></i> Baixar PDF
+                </a>
+              </div>
+            </div>
+            <div class="col-lg-6 col-md-6 col-12">
+              <div class="imprensa-item">
+                <h4>João no Guarani de Cinema</h4>
+                <p>Matéria publicada no Guarani de Cinema.</p>
+                <a href="../docs/imprensa/João_no_Guarnice_de_Cinema.jpg" target="_blank" class="pdf-icon">
+                  <i class="bi-file-pdf"></i> Baixar PDF
+                </a>
+              </div>
+            </div>
+            <div class="col-lg-6 col-md-6 col-12">
+              <div class="imprensa-item">
+                <h4>Matéria filmes no Teatro do Boi</h4>
+                <p>Matéria sobre filmes no Teatro do Boi.</p>
+                <a href="../docs/imprensa/materia_filmes_no_Teatro_do_Boi.jpg" target="_blank" class="pdf-icon">
+                  <i class="bi-file-pdf"></i> Baixar PDF
+                </a>
+              </div>
+            </div>
+            <div class="col-lg-6 col-md-6 col-12">
+              <div class="imprensa-item">
+                <h4>Palestra no Salipi - Cinema e Literatura</h4>
+                <p>Matéria sobre palestra no Salipi.</p>
+                <a href="../docs/imprensa/Palestra_no_Salipi_(Cinema_e_Literatura).jpg" target="_blank" class="pdf-icon">
+                  <i class="bi-file-pdf"></i> Baixar PDF
+                </a>
+              </div>
+            </div>
+            <div class="col-lg-6 col-md-6 col-12">
+              <div class="imprensa-item">
+                <h4>Revista SET - Cipriano</h4>
+                <p>Matéria sobre o filme Cipriano publicada na Revista SET.</p>
+                <a href="../docs/imprensa/revista_SET_(Cipriano).jpg" target="_blank" class="pdf-icon">
+                  <i class="bi-file-pdf"></i> Baixar PDF
+                </a>
+              </div>
+            </div>
+            <div class="col-lg-6 col-md-6 col-12">
+              <div class="imprensa-item">
+                <h4>Semana do Folclore Teresina-PI</h4>
+                <p>Matéria sobre sessões de filme na Semana do Folclore em Teresina.</p>
+                <a href="../docs/imprensa/Semana_do_Folclore_Teresina-PI_(Sessoes_de_filme).jpg" target="_blank" class="pdf-icon">
+                  <i class="bi-file-pdf"></i> Baixar PDF
+                </a>
+              </div>
+            </div>
+            <div class="col-lg-6 col-md-6 col-12">
+              <div class="imprensa-item">
+                <h4>Semana Santa Oeiras-PI</h4>
+                <p>Matéria sobre sessões de filmes na Semana Santa em Oeiras.</p>
+                <a href="../docs/imprensa/Semana_Santa_Oeiras-PI_(Sessoes_de_filmes).jpg" target="_blank" class="pdf-icon">
+                  <i class="bi-file-pdf"></i> Baixar PDF
+                </a>
               </div>
             </div>
           </div>
